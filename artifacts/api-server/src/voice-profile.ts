@@ -103,6 +103,23 @@ export const voiceProfile = {
     ],
   },
 
+  voiceDumpProtocol: {
+    rule: "Dayna's voice recordings and concept messages are raw concept-building material, not locked copy or new pillars. She talks through examples to create frameworks. Sometimes she swears, repeats herself, or describes things in progress. The agent's job is to distill: find the concept inside the dump, express it in the master voice, and NOT create new pillars, locks, or service categories from conversational examples.",
+    howToIdentify: [
+      "Is this describing a concrete situation a client would recognize? → It's a framing example, not a rule.",
+      "Does it introduce a new named service or pillar? → Only lock it if Dayna explicitly calls it a new service with pricing and logistics.",
+      "Is she explaining how an existing pillar works? → Update the canonical description, don't create a new one.",
+      "Is she giving a general philosophy statement? → Add it to emotionalArchitecture or canonicalCopy as a framing tool.",
+    ],
+    canonicalConceptExamples: [
+      {
+        source: "Dayna voice — emotional entry point to all four services",
+        concept: "Most people aren't lazy. They're overloaded. The lamp that never got replaced after someone passed away. The closet full of things worth reselling that's been sitting untouched for three years. The storage unit everyone avoids opening. The move that technically happened six months ago, except half the house still feels temporary. What helps isn't another app, system, or productivity method. It's another capable person who can walk in, see the whole picture clearly, and start untangling what's actually stuck.",
+        use: "Homepage or About page opening. Sets up the permission structure: you are not lazy, you are overloaded, and there is a specific kind of help for this. The four images map to Legacy (lamp), Resale (closet), The Reset (storage unit), and Home Reset/Move (six months ago). This is not a new pillar — it is the emotional case for why all four pillars exist.",
+      },
+    ],
+  },
+
   voiceTests: [
     "Does it sound like someone talking to a smart friend, or a brand talking at a customer?",
     "Is the business logic serving the human truth, or overriding it?",
@@ -149,9 +166,11 @@ This work creates thoughtful pathways for what remains useful, meaningful, insur
     // ── RESOLVED ──────────────────────────────────────────────────────────────
     "FIXED: FAQ.tsx + TheReset.tsx — 'completely transform a closet' → rewritten to 'back to fully functional'",
     "FIXED: FAQ.tsx + HouseCalls.tsx — floating 'I'm particularly thoughtful about this' duplicate removed from both",
-    "FIXED: Home.tsx title tag — 'Household Stewardship' removed",
+    "FIXED: index.html — 'Household Stewardship' removed from <title>, og:title, twitter:title, og:image:alt, and JSON-LD description",
     "FIXED: HouseCalls.tsx + TheReset.tsx — 'Payment due: At booking' → 'At time of service'",
     "FIXED: Home.tsx — Gayle attribution updated to 'Gayle Williams · Seattle Client'",
+    "FIXED: FastBagFill.tsx — 'free pickup only works if it's worth both our time / $5–$10 range / payouts closer to $3 an item' → canonical no-wrong-door addendum",
+    "FIXED: Footer.tsx — Poshmark, eBay, Facebook links removed; only two Instagram handles remain",
   ],
 
   annotatedExamples: [

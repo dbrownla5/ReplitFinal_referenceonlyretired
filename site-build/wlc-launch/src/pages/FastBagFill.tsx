@@ -279,16 +279,13 @@ export default function FastBagFill() {
                 Let's make sure this is the right door.
               </h2>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                I built this service to make life easier — for clients and for anyone who's looked at the resale options out there and felt defeated by them. If a shirt can sell for $8, I'd rather make that happen for you than watch it go in a donation bag. That's the whole point.
+                Fill the bag with whatever's been sitting there — you don't have to know what anything's worth, that's on me. I sort it after pickup and tell you straight: here's what I'll list, here's what's better off donated, here's the judgment calls.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                But I want to be straight with you, because a free pickup only works if it's worth both our time. If a whole bag is items in the $5–$10 range, you're looking at payouts closer to $3 an item after platform and service fees — and a bag like that is hours of work for a small return on both sides.
-              </p>
-              <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                So here's my ask: if what you really need is help <em>sorting</em>, deciding what to keep, or getting things out the door to donation — that's real work, and I do it. Book a <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>4-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>2-hour House Call</Link> and we'll handle it together, the right way.
+                If it turns out a bag is mostly things that won't bring much back, I'll tell you that too — and we'll find the better route. A <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>4-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>2-Hour House Call</Link> gets it sorted, anything worth listing pulled out, and the rest handled the same day.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8 }}>
-                Fast Bag Fill is for the pieces that genuinely have a second life in them. If that's what you've got, send it my way. If you're not sure — just tell me what you're working with, and I'll point you to the right service. No wrong door here.
+                You never make a wrong move here. That's the whole point.
               </p>
             </div>
           </FadeUp>
