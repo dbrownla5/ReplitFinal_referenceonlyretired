@@ -54,10 +54,10 @@ export default function LegacyPillar() {
               Legacy Planning &amp;<br />Inventory Catalog
             </h1>
             <p style={{ fontSize: "1.2rem", fontWeight: 300, color: "rgba(248,244,227,0.75)", lineHeight: 1.8, marginBottom: "0.75rem" }}>
-              The things inside the walls.
+              The relief of the life in the hidden things.
             </p>
             <p style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(248,244,227,0.6)", lineHeight: 1.8, marginBottom: "2.5rem" }}>
-              Documented before they become a burden.
+              Assigning value, story, and meaning to what a life accumulates — and making a plan while there's still time to choose how it goes. Whether you're planning ahead or a situation has arrived.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link href="/contact" className="btn btn-sage">Schedule a Consultation</Link>
@@ -83,7 +83,7 @@ export default function LegacyPillar() {
                 When a home transitions — through a move, a change in health, or simply a decision to downsize — the people left to sort through it often have no record of what anything is, what it's worth, or what the person who owned it would have wanted done with it.
               </p>
               <p className="body-lg">
-                Legacy Planning & Inventory Catalog is the work of creating that record while there is still time to do it thoughtfully.
+                Legacy Planning & Inventory Catalog is the work of creating that record — assigning value, story, and meaning to what a life accumulates, and making a plan while there's still time to choose how it goes. Some people do this proactively, before any transition happens. Others call when a situation has already arrived. Both are the right time.
               </p>
             </FadeUp>
 
