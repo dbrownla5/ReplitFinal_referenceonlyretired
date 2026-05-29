@@ -176,7 +176,7 @@ export default function HouseCalls() {
             {[
               { q: "What's the difference between a House Call and The Reset?", a: "The Reset is a focused session for a single space. House Calls are flexible, hourly sessions for the broader running-the-household stuff — technology, home safety, errands, vendor coordination, transitions. House Calls have a 2-hour minimum." },
               { q: "Can I book recurring House Calls?", a: "Yes. Monthly retainer packages are available for clients who want consistent, scheduled support. These are priced individually based on frequency and scope. Ask about them during your call." },
-              { q: "Do you work with older adults?", a: "Yes. I work with people who want support maintaining their homes and their independence. The pace is set by the person, not me — and the goal is always to make the operational parts easier without getting in the way of how they already live." },
+              { q: "Do you work with people who are aging in place, or with their families?", a: "Yes. I work with people who want support maintaining their homes and their independence. The pace is set by the person, not me — and the goal is always to make the operational parts easier without getting in the way of how they already live." },
               { q: "What if the task takes less than 2 hours?", a: "The 2-hour minimum is the booking unit. If I finish early, I'll use the remaining time on whatever else would be useful — a quick tech check, a donation sort, whatever makes sense." },
               { q: "What kinds of tech issues can you handle?", a: "Phone setup and transfers, Wi-Fi troubleshooting, smart home devices, TV and streaming setup, password organization, and navigating telecom billing issues. If it's a home tech problem, I can usually get in the weeds and resolve it." },
             ].map((item, i) => (
@@ -214,7 +214,7 @@ export default function HouseCalls() {
               </p>
               <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ink)", opacity: 0.65, letterSpacing: "0.08em", marginBottom: "2.5rem" }}>— Gayle · Seattle · House Calls</p>
               <p style={{ fontSize: "0.95rem", fontWeight: 300, color: "var(--ink)", lineHeight: 1.8, opacity: 0.8 }}>
-                This is what House Calls looks like in real life. Not a transformation, not a project — just someone who came in, got the TV working, set up the lamps, arranged the closet so everything is visible and reachable. The small stuff matters because the small stuff is daily life.
+                This is what House Calls looks like in real life. Not a makeover, not a project — just someone who came in, got the TV working, set up the lamps, arranged the closet so everything is visible and reachable. The small stuff matters because the small stuff is daily life.
               </p>
             </div>
           </FadeUp>

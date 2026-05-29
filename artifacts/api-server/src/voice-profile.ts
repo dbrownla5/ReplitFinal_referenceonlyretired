@@ -160,9 +160,7 @@ This work creates thoughtful pathways for what remains useful, meaningful, insur
   },
 
   knownViolationsInBuild: [
-    // ── OPEN ──────────────────────────────────────────────────────────────────
-    "FAQ.tsx confidentiality answer — 'their households' (internal/formal language) — not yet fixed",
-    "'independent older adults' / 'older adults' — check against one-use budget; confirm budget is not exceeded",
+    // ── ALL KNOWN VIOLATIONS RESOLVED ─────────────────────────────────────────
     // ── RESOLVED ──────────────────────────────────────────────────────────────
     "FIXED: FAQ.tsx + TheReset.tsx — 'completely transform a closet' → rewritten to 'back to fully functional'",
     "FIXED: FAQ.tsx + HouseCalls.tsx — floating 'I'm particularly thoughtful about this' duplicate removed from both",

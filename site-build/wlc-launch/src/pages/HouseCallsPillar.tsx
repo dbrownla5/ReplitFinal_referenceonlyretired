@@ -191,7 +191,7 @@ export default function HouseCallsPillar() {
           </FadeUp>
           <div style={{ maxWidth: 720 }}>
             {[
-              { q: "Is this only for older adults?", a: "Not at all. House Calls is for anyone who needs trusted, practical help at home — a professional who travels constantly, someone managing a parent's home from another city, or anyone who just needs an extra set of capable hands." },
+              { q: "Is this designed for a specific type of client?", a: "Not at all. House Calls is for anyone who needs trusted, practical help at home — a professional who travels constantly, someone managing a parent's home from another city, or anyone who just needs an extra set of capable hands." },
               { q: "Can I book this for a family member?", a: "Yes. Many clients book House Calls on behalf of a parent or relative. I handle the coordination and make sure the session is tailored to what that person actually needs." },
               { q: "What if the task takes less than 2 hours?", a: "The 2-hour minimum is the booking unit. If I finish early, I'll use the remaining time on whatever else would be useful — a quick tech check, a donation sort, whatever makes sense." },
               { q: "Can I set up ongoing support?", a: "Yes. Retainer continuity is available for clients who want regular, scheduled support. No membership, no subscription — just a consistent relationship built around how your home actually works." },

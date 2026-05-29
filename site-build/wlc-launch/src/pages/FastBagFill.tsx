@@ -279,13 +279,13 @@ export default function FastBagFill() {
                 Let's make sure this is the right door.
               </h2>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                Fill the bag with whatever's been sitting there — you don't have to know what anything's worth, that's on me. I sort it after pickup and tell you straight: here's what I'll list, here's what's better off donated, here's the judgment calls.
+                Fast Bag Fill is for clothing, shoes, and accessories that already have a real resale buyer out there — and the pickup is free because the value comes from the sale.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                If it turns out a bag is mostly things that won't bring much back, I'll tell you that too — and we'll find the better route. A <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>4-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>2-Hour House Call</Link> gets it sorted, anything worth listing pulled out, and the rest handled the same day.
+                If your bag is mostly everyday pieces that won't bring much back, resale isn't the lane that helps you. What actually helps is a <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>4-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>2-Hour House Call</Link> — I come in, sort the whole thing, pull aside anything worth listing, and handle the donation run myself the same day. That's the move when the goal is gone and handled rather than sold.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8 }}>
-                You never make a wrong move here. That's the whole point.
+                Not sure which one you've got? Send a photo first. I'll point you to the right door before you book.
               </p>
             </div>
           </FadeUp>
