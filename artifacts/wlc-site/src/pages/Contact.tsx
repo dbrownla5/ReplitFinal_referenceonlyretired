@@ -221,6 +221,10 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (bagPath && (!agreementRead || !form.agreementAccepted)) {
+      setSubmitError("You need to read and accept the Resale Agreement before submitting.");
+      return;
+    }
     setSubmitting(true);
     setSubmitError("");
     const summary = buildSummary();
@@ -395,7 +399,13 @@ export default function Contact() {
                   {step > 0 && (
                     <button
                       type="button"
-                      onClick={() => setStep(prev => (prev - 1) as 0 | 1 | 2 | 3)}
+                      onClick={() => {
+                        if (step === 3 && bagPath) {
+                          setStep(1);
+                        } else {
+                          setStep(prev => (prev - 1) as 0 | 1 | 2 | 3);
+                        }
+                      }}
                       style={{ marginTop: "2rem", fontSize: "0.78rem", fontWeight: 500, color: "var(--sage-dark)", background: "none", border: "none", cursor: "pointer", padding: 0, textDecoration: "underline" }}
                     >
                       ← Back
@@ -488,8 +498,15 @@ export default function Contact() {
                     </div>
                   )}
 
-                  {/* STEP 2B: Context — for paths that need it */}
-                  {step === 2 && returningNeed !== "book-again" && (
+                  {/* STEP 2B: Context — only for paths that genuinely need it */}
+                  {step === 2 && (
+                    (clientType === "returning" && returningNeed === "just-talk") ||
+                    (clientType === "new" && (
+                      serviceChoice === "reset" || serviceChoice === "house-call" ||
+                      serviceChoice === "closeout" || serviceChoice === "bigger" ||
+                      serviceChoice === "for-parent" || serviceChoice === "not-sure"
+                    ))
+                  ) && (
                     <div>
                       <div style={{ backgroundColor: "var(--parchment-mid)", padding: "1rem 1.25rem", marginBottom: "2rem", borderLeft: "3px solid var(--sage)" }}>
                         <p style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--ink)" }}>{buildSummary()}</p>
