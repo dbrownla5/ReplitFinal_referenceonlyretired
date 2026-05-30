@@ -54,10 +54,9 @@ export default function Home() {
                 color: "rgba(248,244,227,0.65)",
                 lineHeight: 1.75,
                 marginBottom: "2.5rem",
-                maxWidth: 520,
+                maxWidth: 540,
               }}>
-                Home resets, moves, legacy inventory, house calls, resale.<br />
-                One number, one person, one invoice.
+                Because most people don't actually need four different services and a group text. They need someone capable who can see the whole picture and help life start moving again.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/contact" className="btn btn-sage">Schedule a Call</Link>
@@ -94,6 +93,43 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ── THE CONVERSATIONS IN BETWEEN ── */}
+      <section style={{ backgroundColor: "var(--parchment)", padding: "6.5rem 0" }}>
+        <div className="container">
+          <FadeUp>
+            <div style={{ maxWidth: 720 }}>
+              <p style={{ fontSize: "1.05rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.85, marginBottom: "1.75rem" }}>
+                Google can help you find a mover, a home organizer, someone to list your designer clothes, a TaskRabbit, an estate sale company, or a guy named Mike with a truck.
+              </p>
+              <p style={{ fontSize: "1.05rem", fontWeight: 400, color: "var(--ink)", lineHeight: 1.85, marginBottom: "2rem" }}>
+                What it doesn't really cover are the conversations in between.
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2.5rem", borderLeft: "2px solid var(--sage)" }}>
+                {[
+                  "“No, Mom, buying the iPhone is not the same thing as setting up the iPhone.”",
+                  "“I know the storage unit has a system. I’m just not sure anyone else understands it.”",
+                  "“Technically we moved months ago. We just never fully landed.”",
+                  "“We were supposed to clean out the garage after Dad passed. Then life kept happening.”",
+                  "“These things are probably worth selling. Realistically they’ve been sitting here for three years.”",
+                  "“I don’t need a full organizer. I need someone to help me deal with… all this.”",
+                  "“I can do it myself. I just… haven’t.”",
+                ].map((line, i) => (
+                  <li key={i} style={{ fontSize: "1rem", fontWeight: 300, fontStyle: "italic", color: "var(--ink-soft)", lineHeight: 1.6, padding: "0.55rem 0 0.55rem 1.5rem" }}>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontSize: "1.05rem", fontWeight: 400, color: "var(--ink)", lineHeight: 1.85, marginBottom: "1rem" }}>
+                That's the space The Well Lived Citizen exists in. For the things that fall between categories. And the moments when life becomes quietly too operationally complicated to untangle alone.
+              </p>
+              <p style={{ fontSize: "1.05rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.85 }}>
+                Because sometimes people don't need another platform or another vendor. They need one capable person who can see the whole picture and help life start moving again.
+              </p>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
