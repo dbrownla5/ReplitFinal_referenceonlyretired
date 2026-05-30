@@ -84,14 +84,15 @@ export default function FastBagFill() {
                   The full flow
                 </h3>
                 {[
-                  { step: "Request a pickup", note: "Submit the form — you're agreeing to the resale terms here" },
-                  { step: "Schedule the handoff", note: "Free pickup in LA. Day before, I confirm your window and item count" },
-                  { step: "Custody transfers", note: "In-person release, UPS delivery, or courier confirmation" },
-                  { step: "I evaluate", note: "Piece by piece, on my time, not yours — 7 to 10 business days" },
-                  { step: "You get the full list", note: "Every item, platform, starting price, estimated sale and turn, plus anything I'd route elsewhere" },
-                  { step: "You approve the listings", note: "24 hours to consent or pull items — then your 30-day cycle starts" },
-                  { step: "Listings go live", note: "Routed to the platform where the right buyer lives" },
-                  { step: "Payout when items sell", note: "Report every 30 days, payout every 30 days from your consent date" },
+                  { step: "Agreement signed at intake", note: "Submitting the form means agreeing to the Resale Agreement. No signature, no pickup — this protects both of us." },
+                  { step: "Day-before confirmation", note: "I confirm your pickup window and ask for a rough item count" },
+                  { step: "Custody transfers at pickup", note: "In-person release, UPS delivery, or Uber courier. Pickup photo taken regardless — this legally transfers possession." },
+                  { step: "48-hour inventory confirmation", note: "I verify the count against what you gave me. You have 48 hours to flag any discrepancy." },
+                  { step: "7–10 business day evaluation", note: "Viability, platform routing, pricing, estimated sale price, turn, and tier — piece by piece, on my time." },
+                  { step: "Full intake report to you", note: "Every item: platform, starting price, estimated sale price, estimated turn, and alternate pathways. Unsanitary or biohazard items are disposed immediately." },
+                  { step: "24-hour consent window", note: "You sign consent to listings or pull items. No response within 24 hours means listings proceed." },
+                  { step: "4-day review period", note: "Add provenance, sizing, measurements, or history to boost the listing. Anything that helps a buyer decide." },
+                  { step: "30-day payout clock starts", note: "Clock runs from your consent signature. First payout: first Monday after your 30-day close. Report every 30 days." },
                 ].map((item, i) => (
                   <div key={i} style={{
                     padding: "0.75rem 0",

@@ -1,3 +1,4 @@
 - [WLC site audit rules](wlc-site-audit.md) — banned phrases, Gayle budget, demographic language, pillar voice
 - [WLC brand vault rules](wlc-brand-vault-rules.md) — key vault enforcement rules for voice/copy
 - [WLC artifact location](wlc-artifact-location.md) — site is registered as artifacts/wlc-site (moved from site-build/wlc-launch)
+- [Handshake flow](handshake-flow.md) — LOCKED 9-step bag pickup chain-of-custody; agreement signed at intake is the gate, not at evaluation
