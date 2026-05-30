@@ -249,6 +249,7 @@ export default function Contact() {
           pickupRelease: form.pickupRelease,
           courierNotes: form.courierNotes,
           agreementAccepted: form.agreementAccepted,
+          agreementTimestamp: form.agreementAccepted ? new Date().toISOString() : undefined,
           estimatedItems: form.estimatedItems,
         }),
       });
@@ -729,7 +730,7 @@ export default function Contact() {
                                   style={{ marginTop: "0.2rem", flexShrink: 0 }}
                                 />
                                 <span style={{ fontSize: "0.82rem", fontWeight: 500, color: "var(--ink)", lineHeight: 1.5 }}>
-                                  I have read and agree to the Resale Agreement. I understand possession transfers at pickup and my 30-day cycle begins when I approve the listing. Today's date will be recorded at submission.
+                                  I have read and agree to the Resale Agreement. I understand possession transfers at pickup and my 30-day cycle begins when I approve the listing. I agree — {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}.
                                 </span>
                               </label>
                             )}
