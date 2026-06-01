@@ -69,7 +69,8 @@ Do not change the hero without Dayna's sign-off. Other approved positioning line
 1. **`docs/BRAND-VOICE.md`** ⭐ — final voice: hero, core truths, positioning lines, tone, Brand Monster word list, the final test.
 2. **`docs/CONTENT-SYSTEM.md`** ⭐ — how to turn Dayna's brain dumps into copy: the two-layer client model + 8-stage transformation process. Use for any content/captions.
 3. **`docs/SERVICES-PRICING.md`** ⭐ — final canonical pricing + service scope. Build the Services and Pricing pages from this.
-4. **`artifacts/wlc-site/src/content/brand.ts`** ⭐ — the single source of truth in code. Facts the site renders come from here.
+4. **`docs/CRM-AND-INTAKE.md`** ⭐ — the intake + CRM backbone: one conditional intake form, every submission → client record, resale path opens the chain-of-custody ticket, e-sign agreements on profiles, CRM dashboard with sort/notes/history/calendar. Read before building intake or the dashboard.
+5. **`artifacts/wlc-site/src/content/brand.ts`** ⭐ — the single source of truth in code. Facts the site renders come from here.
 5. **`docs/brand-source/`** — Dayna's untouched original docs (the raw truth the above were built from).
 6. **`attached_assets/wlc-brand-vault_*.md`** — deeper background (origin story, the Gayle arc, social architecture). The ⭐ docs win on any conflict.
 
@@ -109,7 +110,7 @@ The signed-intake → bag-pickup → consent flow ("the handshake") is currently
 - The contact form and the intake form should feed **one client-record system**, route by service type, and support ongoing relationships over time — this is the foundation of the CRM.
 - Keep the external-CRM webhook seam intact (`WEBHOOK_URL` + `WEBHOOK_SECRET`, see `docs/HANDSHAKE.md` / `docs/PARTNER-BRIEF.md`) so records can sync to an outside CRM when Dayna chooses — but the database stays the source of truth so no lead is ever lost.
 
-When extending intake, never treat it as resale-only. It is the client relationship backbone for the entire business.
+When extending intake, never treat it as resale-only. It is the client relationship backbone for the entire business. **Full spec: `docs/CRM-AND-INTAKE.md` — read it before building intake or the dashboard.** Summary: ONE conditional intake form for all services; every submission writes to a CRM client record (sort by who reached out/when, booked vs. not, notes, booking frequency, calendar); only the Fast Bag Pickup path opens the chain-of-custody workflow ticket; agreements are e-sign docs attached to the client profile, and a home visit needs no resale agreement until Dayna decides she's taking items. Build on the existing handshake + `/api/handshake/dashboard`; unify `contact_submissions` and `handshakes` into one client model. Not overnight — phased.
 
 **Resilience (already built):** `/api/handshake/intake` writes to the database when available; if the DB isn't provisioned yet, it **falls back to emailing the lead to the owner** (via Resend) and still confirms success — so a lead is never lost. Provisioning Postgres turns on full chain-of-custody tracking, but lead capture works without it as long as `RESEND_API_KEY` is set. Do not remove this fallback.
 
