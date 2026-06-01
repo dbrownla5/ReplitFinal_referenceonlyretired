@@ -5,9 +5,12 @@ A voice-consistent website and API for a Los Angeles-based resale, estate, and v
 ## Project Map — read these first
 *If you are an AI agent opening this project: read this section, then the files below, before doing anything. Everything you need to understand the business and its voice is here. You do not need to be told folder by folder.*
 
-- **`attached_assets/wlc-brand-vault_*.md`** — THE brand voice source of truth. Origin story, positioning, locked hero, banned language, the four pillars, voice layers. Add, never delete. **Read this before writing any client-facing copy.**
-- **`docs/SERVICES-PRICING.md`** — the Services & Pricing foundation: two-layer model (Quick Sells + pillars), rates, flex blocks, supply add-on bundles. Build the Services/Pricing pages from this.
-- **`artifacts/api-server/src/voice-profile.ts`** — the operational voice profile (code form): rules, anti-patterns, canonical copy, annotated examples. Powers the voice + caption tools.
+- **`docs/BRAND-VOICE.md`** — ⭐ FINAL brand voice (locked 2026-05-31). Locked hero, core truths, positioning lines, tone, observational-specificity rule, Brand Monster words, the final test. **Read before writing any client-facing copy. Supersedes voice-profile.ts where they conflict.**
+- **`docs/CONTENT-SYSTEM.md`** — ⭐ how to turn Dayna's brain dumps into brand-aligned copy: the two-layer client model + the 8-stage transformation process. Use when generating any content/captions.
+- **`docs/SERVICES-PRICING.md`** — ⭐ FINAL canonical pricing (locked 2026-05-31): entry/core/continuity tiers, all rates, flex blocks, commission table, supply add-ons, internal pricing guidance. Build Services/Pricing pages + the single-source content config from this.
+- **`docs/brand-source/`** — Dayna's untouched original source docs (Brand Foundation Lines, Case Study Format, Content Transformation System). The raw truth the canonical docs were built from.
+- **`attached_assets/wlc-brand-vault_*.md`** — deeper brand context: origin story, the Gayle arc, inherited-stuff thesis, social architecture. Background; the ⭐ docs above win on any conflict.
+- **`artifacts/api-server/src/voice-profile.ts`** — operational voice profile (code form) powering the voice/caption tools. Superseded by BRAND-VOICE.md where they conflict.
 - **`docs/DIRECTIVE.md`** — how the owner's tools fit together (Claude / Manus / Gemini / Unfold) + content-engine scope.
 - **`docs/GO-LIVE.md`** — plain-English publish checklist (publish → bookings → caption studio).
 - **`docs/LAUNCH-KIT.md`** — ready-to-post launch copy (locked). `docs/CONTENT-ENGINE.md` — caption prompt system.

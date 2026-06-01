@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { usePageMeta } from "@/lib/usePageMeta";
+import { hero } from "@/content/brand";
 
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 
 export default function Home() {
   usePageMeta({
-    title: "The Well Lived Citizen — One Person, One Number, One Invoice · Los Angeles",
+    title: "The Well Lived Citizen — Professional Problem Solver for Modern Life · Los Angeles",
     description: "One person for the move, the resale, the storage unit, and the other thing currently ruining your week. Home resets, house calls, legacy inventory, and curated resale in greater Los Angeles.",
     path: "/",
   });
@@ -46,7 +47,7 @@ export default function Home() {
                 letterSpacing: "-0.02em",
                 marginBottom: "2rem",
               }}>
-                One person for the move, the resale, the storage unit, and the other thing currently ruining your week.
+                {hero.headline}
               </h1>
               <p style={{
                 fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)",
@@ -56,7 +57,7 @@ export default function Home() {
                 marginBottom: "2.5rem",
                 maxWidth: 540,
               }}>
-                Home resets, moves, legacy inventory, house calls, resale. One number, one person, one invoice.
+                {hero.subhead}
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/contact" className="btn btn-sage">Schedule a Call</Link>
