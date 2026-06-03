@@ -73,7 +73,7 @@ export const entryOffers = [
     name: "Quick Resale Pickup",
     price: "Commission-based · free pickup",
     blurb:
-      "Convenient pickup and resale handling for clothing, accessories, and household items.",
+      "Convenient pickup and resale handling for clothing and accessories.",
     href: "/fast-bag-fill",
   },
   {
