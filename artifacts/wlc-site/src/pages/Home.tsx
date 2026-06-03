@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { usePageMeta } from "@/lib/usePageMeta";
-import { hero } from "@/content/brand";
+import { hero, entryOffers } from "@/content/brand";
 
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -65,27 +65,24 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — service manifest */}
+            {/* Right — Quick Entry / Fast Book offers (from brand.ts) */}
             <div style={{ borderLeft: "1px solid rgba(248,244,227,0.12)", paddingLeft: "3rem" }}>
-              {[
-                { num: "01", name: "Home Reset & Move Support", price: "$495 flat · $150/hr ongoing", href: "/home-reset-move-support" },
-                { num: "02", name: "Legacy Planning & Inventory", price: "Scoped after walkthrough", href: "/legacy-planning" },
-                { num: "03", name: "House Calls", price: "$175/hr · 2-hr minimum", href: "/house-calls-pillar" },
-                { num: "04", name: "Curated Resale & Consignment", price: "Commission-based · free pickup", href: "/curated-resale-consignment" },
-              ].map((s, i) => (
-                <Link key={i} href={s.href} style={{ textDecoration: "none" }}>
+              <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sage)", marginBottom: "1.25rem" }}>
+                Quick Entry · start today
+              </p>
+              {entryOffers.map((o) => (
+                <Link key={o.id} href={o.href} style={{ textDecoration: "none" }}>
                   <div style={{
                     display: "flex", justifyContent: "space-between", alignItems: "center",
-                    padding: "1.5rem 0", borderBottom: "1px solid rgba(248,244,227,0.08)",
+                    padding: "1.25rem 0", borderBottom: "1px solid rgba(248,244,227,0.08)",
                     transition: "opacity 0.15s ease", cursor: "pointer",
                   }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.65"}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
                   >
                     <div>
-                      <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sage)", marginBottom: "0.35rem" }}>{s.num}</p>
-                      <p style={{ fontSize: "1rem", fontWeight: 600, color: "var(--parchment)", marginBottom: "0.25rem" }}>{s.name}</p>
-                      <p style={{ fontSize: "0.78rem", fontWeight: 300, color: "rgba(248,244,227,0.45)" }}>{s.price}</p>
+                      <p style={{ fontSize: "1rem", fontWeight: 600, color: "var(--parchment)", marginBottom: "0.25rem" }}>{o.name}</p>
+                      <p style={{ fontSize: "0.78rem", fontWeight: 300, color: "rgba(248,244,227,0.55)" }}>{o.price}</p>
                     </div>
                     <span style={{ color: "var(--sage)", fontSize: "1rem", flexShrink: 0, marginLeft: "1rem" }}>→</span>
                   </div>

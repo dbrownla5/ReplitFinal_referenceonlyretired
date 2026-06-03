@@ -30,7 +30,7 @@ export const company = {
 /** LOCKED HERO — see docs/BRAND-VOICE.md. */
 export const hero = {
   headline:
-    "Professional problem solver. Unofficial fixer of the things life keeps turning into projects.",
+    "Professional problem solver for the things you avoid, don't have time for, or just need handled properly.",
   subhead:
     "Moves, resale, errands, setups, storage units, logistics, tech, vendor coordination, and the things you forgot about too.",
 } as const;
