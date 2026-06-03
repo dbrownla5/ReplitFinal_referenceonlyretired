@@ -625,9 +625,14 @@ export default function Contact() {
                       )}
 
                       {submitError && (
-                        <p style={{ fontSize: "0.85rem", color: "#b94a48", marginBottom: "1rem", lineHeight: 1.5 }}>
-                          {submitError}
-                        </p>
+                        <div style={{ marginBottom: "1rem" }}>
+                          <p style={{ fontSize: "0.85rem", color: "#b94a48", marginBottom: "0.5rem", lineHeight: 1.5 }}>
+                            {submitError}
+                          </p>
+                          <p style={{ fontSize: "0.85rem", color: "var(--ink-soft)", lineHeight: 1.6 }}>
+                            Or reach me directly — <a href="mailto:dayna@thewelllivedcitizen.com" style={{ color: "var(--ink)", fontWeight: 600 }}>dayna@thewelllivedcitizen.com</a> · <a href="tel:3234331350" style={{ color: "var(--ink)", fontWeight: 600 }}>(323) 433-1350</a>
+                          </p>
+                        </div>
                       )}
                       <button type="submit" disabled={submitting} className="btn btn-ink" style={{ width: "100%", justifyContent: "center", padding: "1rem", opacity: submitting ? 0.65 : 1, cursor: submitting ? "not-allowed" : "pointer" }}>
                         {submitting ? "Sending…" : "Send Message"}
