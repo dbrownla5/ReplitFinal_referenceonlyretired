@@ -37,7 +37,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function HomeReset() {
   usePageMeta({
-    title: "Home Reset & Move Support — Pillar 01 | The Well Lived Citizen",
+    title: "Home Organization & Move Support — Pillar 01 | The Well Lived Citizen",
     description: "Your home, made to work for how you actually live. Home resets, move-in setup, post-move settling, closet and pantry systems. Los Angeles.",
     path: "/home-reset-move-support",
   });
@@ -51,7 +51,7 @@ export default function HomeReset() {
           <div style={{ maxWidth: 740 }}>
             <span className="eyebrow eyebrow-light">Pillar 01</span>
             <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>
-              Home Reset &amp;<br />Move Support
+              Home Organization &amp;<br />Move Support
             </h1>
             <p style={{ fontSize: "1.2rem", fontWeight: 300, color: "rgba(248,244,227,0.75)", lineHeight: 1.8, marginBottom: "0.75rem" }}>
               The relief of the room.
@@ -128,7 +128,7 @@ export default function HomeReset() {
                   Sometimes that means unpacking, routing, labeling, donating, storing, or simply getting one zone moving again. Think about the things sitting on the to-do list that never quite get handled. I come in for those.
                 </p>
                 <div style={{ marginTop: "1.5rem", paddingTop: "1.5rem", borderTop: "1px solid var(--warm-gray-lt)" }}>
-                  <p style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--sage-dark)", letterSpacing: "0.05em" }}>Quick Book entry: <Link href="/the-reset" style={{ color: "var(--ink)" }}>The 4-Hour Reset</Link></p>
+                  <p style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--sage-dark)", letterSpacing: "0.05em" }}>Quick Entry: <Link href="/the-reset" style={{ color: "var(--ink)" }}>Four-Hour Reset</Link></p>
                 </div>
               </div>
             </FadeUp>
@@ -144,7 +144,7 @@ export default function HomeReset() {
                 </p>
                 <div>
                   {[
-                    { label: "The Closeout", body: "You go first. I stay behind to close out what's left — packing, storing, routing resale, shipping essentials, labeling boxes so the move continues in flexible chunks without you carrying the urgency." },
+                    { label: "Move Closeout", body: "You go first. I stay behind to close out what's left — packing, storing, routing resale, shipping essentials, labeling boxes so the move continues in flexible chunks without you carrying the urgency." },
                     { label: "The Professional Landing", body: "For professionals arriving in Los Angeles the same day as their boxes. The bed gets built, the phone charger gets found, the workspace gets set, clothing for the coming week gets unpacked." },
                   ].map((item, i) => (
                     <div key={i} style={{ marginBottom: "1.25rem" }}>

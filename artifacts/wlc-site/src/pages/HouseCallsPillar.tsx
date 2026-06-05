@@ -169,7 +169,7 @@ export default function HouseCallsPillar() {
                   { label: "Ongoing continuity", value: "Retainer available" },
                   { label: "Membership required", value: "No" },
                   { label: "Service area", value: "Los Angeles + surrounding" },
-                  { label: "Quick Book entry", value: "The 2-Hour House Call" },
+                  { label: "Quick Entry", value: "Two-Hour House Call" },
                 ].map((row, i) => (
                   <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "0.85rem 0", borderBottom: "1px solid var(--warm-gray-lt)", fontSize: "0.9rem" }}>
                     <span style={{ fontWeight: 300, color: "var(--sage-dark)" }}>{row.label}</span>

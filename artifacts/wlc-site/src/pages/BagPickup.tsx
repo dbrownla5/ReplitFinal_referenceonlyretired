@@ -5,13 +5,13 @@ import { usePageMeta } from "@/lib/usePageMeta";
 
 /**
  * Signed bag-pickup intake. This is the page the "Schedule a Pickup" CTAs point
- * to for Fast Bag Fill — it requires the resale agreement signature that opens a
+ * to for Quick Resale Pickup — it requires the resale agreement signature that opens a
  * Handshake record on the server.
  */
 export default function BagPickup() {
   usePageMeta({
     title: "Schedule a Bag Pickup — The Well Lived Citizen",
-    description: "Sign the resale agreement and request your Fast Bag Fill pickup. Possession transfers at handoff; you'll get an itemized inventory within 7–10 business days.",
+    description: "Sign the resale agreement and request your Quick Resale Pickup. Possession transfers at handoff; you'll get an itemized inventory within 7–10 business days.",
     path: "/bag-pickup",
   });
   return (
@@ -19,7 +19,7 @@ export default function BagPickup() {
       <Nav />
       <section style={{ backgroundColor: "var(--ink)", paddingTop: "10rem", paddingBottom: "4rem" }}>
         <div className="container">
-          <span className="eyebrow" style={{ color: "rgba(248,244,227,0.45)" }}>Fast Bag Fill</span>
+          <span className="eyebrow" style={{ color: "rgba(248,244,227,0.45)" }}>Quick Resale Pickup</span>
           <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1rem" }}>
             Sign, then schedule<br />your pickup.
           </h1>

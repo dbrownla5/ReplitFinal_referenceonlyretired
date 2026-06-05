@@ -1,7 +1,11 @@
 /*
  * THE WELL LIVED CITIZEN — GLOBAL DESIGN SYSTEM
  * Palette: Warm parchment (#F8F4E3) + warm grays (#D4CDC3, #D5D0CD)
- *          + muted sage-olive (#A2A392, #9A998C) + near-black (#38302E)
+ *          + steel-slate accent (deep #304A59, muted #94A7B0) + near-black (#38302E)
+ *          + cool neutral gray (#7E868A) for muted text.
+ * NOTE: the accent is steel-blue slate (Dayna's original Well Dressed Citizen color),
+ *       NOT sage-olive and NOT terracotta. The legacy token names --sage / --sage-dark
+ *       are kept (used ~200×) but now hold the muted steel accent / cool gray.
  * Typography: Plus Jakarta Sans — 800 display, 400/300 body
  * Structure: Stacked full-bleed color blocks, opaque underlays, shadow cards
  * No rounded corners. No gradients. No blur. Restraint is the brand.
@@ -42,8 +46,13 @@
   --parchment-mid: #EAE3D4;
   --warm-gray-lt:  #D4CDC3;
   --warm-gray-md:  #D5D0CD;
-  --sage:          #A2A392;
-  --sage-dark:     #9A998C;
+  /* Steel-slate accent (replaces the old sage-olive). Deep = filled buttons/panels
+     with light text; muted = inline accents (eyebrows, arrows) that must read on
+     both parchment AND the dark ink sections. */
+  --slate:         #304A59; /* deep steel-blue — Dayna's original WDC color */
+  --slate-deep:    #25404C; /* hover / pressed */
+  --sage:          #94A7B0; /* LEGACY NAME — now the muted steel inline accent */
+  --sage-dark:     #7E868A; /* LEGACY NAME — now cool neutral gray for muted text */
   --ink:           #38302E;
   --ink-soft:      #4A4340;
 
@@ -54,7 +63,7 @@
   --text-primary:  var(--ink);
   --text-muted:    var(--sage-dark);
   --border-color:  var(--warm-gray-lt);
-  --accent:        var(--sage);
+  --accent:        var(--slate);
 
   --radius: 0px;
   --background:           #F8F4E3;
@@ -65,15 +74,15 @@
   --popover-foreground:   #38302E;
   --primary:              #38302E;
   --primary-foreground:   #F8F4E3;
-  --secondary:            #A2A392;
+  --secondary:            #304A59;
   --secondary-foreground: #F8F4E3;
   --muted:                #EAE3D4;
-  --muted-foreground:     #9A998C;
+  --muted-foreground:     #7E868A;
   --accent-foreground:    #38302E;
   --destructive:          oklch(0.577 0.245 27.325);
   --border:               #D4CDC3;
   --input:                #D4CDC3;
-  --ring:                 #A2A392;
+  --ring:                 #304A59;
 }
 
 @layer base {
@@ -133,8 +142,8 @@
   .block-parchment     { background-color: var(--parchment); color: var(--ink); }
   .block-parchment-mid { background-color: var(--parchment-mid); color: var(--ink); }
   .block-ink           { background-color: var(--ink); color: var(--parchment); }
-  .block-sage          { background-color: var(--sage); color: var(--ink); }
-  .block-sage-dark     { background-color: var(--sage-dark); color: var(--parchment); }
+  .block-sage          { background-color: var(--slate); color: var(--parchment); }
+  .block-sage-dark     { background-color: var(--slate-deep); color: var(--parchment); }
   .block-warm-gray     { background-color: var(--warm-gray-lt); color: var(--ink); }
 
   .block-cream    { background-color: var(--parchment); color: var(--ink); }
@@ -150,7 +159,7 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
-  .underlay-tag-sage      { background-color: var(--sage); color: var(--ink); }
+  .underlay-tag-sage      { background-color: var(--slate); color: var(--parchment); }
   .underlay-tag-parchment { background-color: var(--parchment); color: var(--ink); }
 
   .eyebrow {
@@ -256,13 +265,13 @@
   }
 
   .btn-sage {
-    background-color: var(--sage);
-    color: var(--ink);
-    border-color: var(--sage);
+    background-color: var(--slate);
+    color: var(--parchment);
+    border-color: var(--slate);
   }
   .btn-sage:hover {
-    background-color: var(--sage-dark);
-    border-color: var(--sage-dark);
+    background-color: var(--slate-deep);
+    border-color: var(--slate-deep);
     color: var(--parchment);
   }
 
@@ -286,8 +295,8 @@
     color: var(--parchment);
   }
 
-  .btn-rust         { background-color: var(--sage); color: var(--ink); border-color: var(--sage); }
-  .btn-rust:hover   { background-color: var(--sage-dark); border-color: var(--sage-dark); color: var(--parchment); }
+  .btn-rust         { background-color: var(--slate); color: var(--parchment); border-color: var(--slate); }
+  .btn-rust:hover   { background-color: var(--slate-deep); border-color: var(--slate-deep); color: var(--parchment); }
   .btn-espresso     { background-color: var(--ink); color: var(--parchment); border-color: var(--ink); }
   .btn-espresso:hover { background-color: var(--ink-soft); border-color: var(--ink-soft); }
   .btn-outline-cream { background-color: transparent; color: var(--parchment); border-color: rgba(248,244,227,0.5); }
@@ -298,7 +307,7 @@
   .hr-espresso { border: none; border-top: 1px solid rgba(248,244,227,0.15); margin: 0; }
 
   .shadow-card      { box-shadow: 4px 4px 0px var(--ink); }
-  .shadow-card-sage { box-shadow: 4px 4px 0px var(--sage); }
+  .shadow-card-sage { box-shadow: 4px 4px 0px var(--slate); }
 
   .fade-up {
     opacity: 0;

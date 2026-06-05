@@ -1,18 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
+import { entryOffers, pillars as brandPillars } from "@/content/brand";
 
-const pillars = [
-  { href: "/home-reset-move-support", label: "The Reset", num: "01" },
-  { href: "/legacy-planning", label: "Legacy Planning & Inventory", num: "02" },
-  { href: "/house-calls-pillar", label: "House Calls", num: "03" },
-  { href: "/curated-resale-consignment", label: "Curated Resale & Consignment", num: "04" },
-];
+// Names + hrefs come from the single source of truth (brand.ts) so the nav can
+// never drift from the rest of the site.
+const pillars = brandPillars.map((p) => ({ href: p.href, label: p.name, num: p.num }));
 
-const quickBooks = [
-  { href: "/the-reset", label: "The 4-Hour Reset" },
-  { href: "/house-calls", label: "The 2-Hour House Call" },
-  { href: "/fast-bag-fill", label: "The Fast Bag Fill" },
-];
+// The three "Quick Entry" offers (Four-Hour Reset / Two-Hour House Call /
+// Quick Resale Pickup). Public label is "Quick Entry" — never "Quick Books".
+const quickEntry = entryOffers
+  .filter((o) => o.id !== "move-closeout")
+  .map((o) => ({ href: o.href, label: o.name }));
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -119,9 +117,9 @@ export default function Nav() {
                 }}>
                   <div style={{ padding: "1.75rem", borderRight: "1px solid var(--warm-gray-lt)" }}>
                     <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--sage-dark)", marginBottom: "1rem" }}>
-                      Quick Books
+                      Quick Entry
                     </p>
-                    {quickBooks.map((qb) => (
+                    {quickEntry.map((qb) => (
                       <Link key={qb.href} href={qb.href} style={{
                         display: "block",
                         padding: "0.5rem 0",
@@ -209,9 +207,9 @@ export default function Nav() {
           <div className="container" style={{ paddingTop: "2rem", paddingBottom: "4rem" }}>
             <div style={{ marginBottom: "2rem" }}>
               <p style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--sage-dark)", marginBottom: "1rem" }}>
-                Quick Books
+                Quick Entry
               </p>
-              {quickBooks.map((qb) => (
+              {quickEntry.map((qb) => (
                 <Link key={qb.href} href={qb.href} style={{
                   display: "block", padding: "0.85rem 0",
                   fontSize: "1rem", fontWeight: 600, color: "var(--ink)",

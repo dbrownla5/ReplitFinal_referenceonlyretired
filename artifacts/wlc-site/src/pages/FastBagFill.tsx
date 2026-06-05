@@ -23,7 +23,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function FastBagFill() {
   usePageMeta({
-    title: "Fast Bag Fill — Easiest Way Into Curated Resale | The Well Lived Citizen",
+    title: "Quick Resale Pickup — Easiest Way Into Curated Resale | The Well Lived Citizen",
     description: "Fill a bag with clothing and accessories. I pick it up, evaluate, list, ship, and pay you when items sell. Commission-based. Free pickup in greater LA.",
     path: "/fast-bag-fill",
   });
@@ -41,7 +41,7 @@ export default function FastBagFill() {
                 Free Pickup · Commission-Only · No Upfront Cost
               </span>
             </div>
-            <h1 className="display-lg" style={{ color: "var(--ink)", marginBottom: "1.5rem" }}>Fast Bag Fill</h1>
+            <h1 className="display-lg" style={{ color: "var(--ink)", marginBottom: "1.5rem" }}>Quick Resale Pickup</h1>
             <p style={{ fontSize: "1.15rem", fontWeight: 300, color: "var(--ink)", lineHeight: 1.75, marginBottom: "1.5rem", opacity: 0.85 }}>
               For the closet, the donation pile, the bag that's been waiting in the hallway. You have things you'd sell yourself — if you had the time, the platforms, or the patience to figure out which item belongs where.
             </p>
@@ -75,7 +75,7 @@ export default function FastBagFill() {
                 You might already have a Poshmark or eBay account you opened in 2022 and never finished setting up. You might have tried to list one piece and gotten lost in the flat-lay photography. You might just be done thinking about it.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8 }}>
-                Fast Bag Fill is the answer to that exact situation. You fill a bag, I pick it up, and you stop carrying the mental weight of "I should really do something with that."
+                Quick Resale Pickup is the answer to that exact situation. You fill a bag, I pick it up, and you stop carrying the mental weight of "I should really do something with that."
               </p>
             </FadeUp>
             <FadeUp delay={100}>
@@ -121,7 +121,7 @@ export default function FastBagFill() {
               Clothing and accessories you've been meaning to let go of.
             </h2>
             <p style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(248,244,227,0.65)", lineHeight: 1.75, maxWidth: 560, marginBottom: "1rem" }}>
-              The Fast Bag Fill is clothing and accessories only. Home decor, furniture, art, and delicate valuables are handled separately through a local consultation.
+              The Quick Resale Pickup is clothing and accessories only. Home decor, furniture, art, and delicate valuables are handled separately through a local consultation.
             </p>
             <p style={{ fontSize: "0.95rem", fontWeight: 300, color: "rgba(248,244,227,0.5)", lineHeight: 1.75, maxWidth: 560, marginBottom: "3rem", fontStyle: "italic" }}>
               Items you took care of and know deserve another life. Please do not send dirty clothing or bio-risk textiles.
@@ -192,7 +192,7 @@ export default function FastBagFill() {
                 <span className="eyebrow eyebrow-sage">Commission Structure</span>
                 <h2 className="display-md" style={{ color: "var(--ink)", marginBottom: "1.5rem" }}>You pay nothing up front. Ever.</h2>
                 <p style={{ fontSize: "0.95rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-                  Fast Bag Fill is a free pickup and a commission-only service. No booking fee, no consultation fee, no charge for the bag evaluation. You pay nothing until something sells — and even then, you don't write a check. Your share is paid out from the proceeds.
+                  Quick Resale Pickup is a free pickup and a commission-only service. No booking fee, no consultation fee, no charge for the bag evaluation. You pay nothing until something sells — and even then, you don't write a check. Your share is paid out from the proceeds.
                 </p>
                 <p style={{ fontSize: "0.95rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.75 }}>
                   Proceeds are split after platform fees and shipping are deducted. Your 30-day clock starts the day you sign the resale agreement — you receive a sales report every 30 days and a payout every 30 days via Venmo, Zelle, or check.
@@ -281,10 +281,10 @@ export default function FastBagFill() {
                 Let's make sure this is the right door.
               </h2>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                Fast Bag Fill is for clothing, shoes, and accessories that already have a real resale buyer out there — and the pickup is free because the value comes from the sale.
+                Quick Resale Pickup is for clothing, shoes, and accessories that already have a real resale buyer out there — and the pickup is free because the value comes from the sale.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                If your bag is mostly everyday pieces that won't bring much back, resale isn't the lane that helps you. What actually helps is a <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>4-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>2-Hour House Call</Link> — I come in, sort the whole thing, pull aside anything worth listing, and handle the donation run myself the same day. That's the move when the goal is gone and handled rather than sold.
+                If your bag is mostly everyday pieces that won't bring much back, resale isn't the lane that helps you. What actually helps is a <Link href="/the-reset" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>Four-Hour Reset</Link> or a <Link href="/house-calls" style={{ color: "var(--sage-dark)", textDecoration: "underline", textUnderlineOffset: "2px" }}>Two-Hour House Call</Link> — I come in, sort the whole thing, pull aside anything worth listing, and handle the donation run myself the same day. That's the move when the goal is gone and handled rather than sold.
               </p>
               <p style={{ fontSize: "1rem", fontWeight: 300, color: "var(--ink-soft)", lineHeight: 1.8 }}>
                 Not sure which one you've got? Send a photo first. I'll point you to the right door before you book.
@@ -309,7 +309,7 @@ export default function FastBagFill() {
               },
               {
                 q: "When do I pay anything?",
-                a: "You don't. Fast Bag Fill is commission-only. You pay nothing up front, nothing at pickup, nothing during evaluation. When items sell, your share is paid out from the proceeds via Venmo, Zelle, or check. Your 30-day cycle starts when you approve the listings after evaluation — you'll get a sales report every 30 days and a payout every 30 days based on what's actually sold in that window.",
+                a: "You don't. Quick Resale Pickup is commission-only. You pay nothing up front, nothing at pickup, nothing during evaluation. When items sell, your share is paid out from the proceeds via Venmo, Zelle, or check. Your 30-day cycle starts when you approve the listings after evaluation — you'll get a sales report every 30 days and a payout every 30 days based on what's actually sold in that window.",
               },
               {
                 q: "How much do I need to have?",

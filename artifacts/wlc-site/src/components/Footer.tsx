@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { pillars } from "@/content/brand";
 
 function InstagramIcon() {
   return (
@@ -72,10 +73,7 @@ export default function Footer() {
             <div className="eyebrow" style={{ color: "rgba(248,244,227,0.45)", marginBottom: "1.25rem" }}>Services</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {[
-                { href: "/home-reset-move-support", label: "The Reset" },
-                { href: "/legacy-planning", label: "Legacy Planning & Inventory" },
-                { href: "/house-calls-pillar", label: "House Calls" },
-                { href: "/curated-resale-consignment", label: "Curated Resale & Consignment" },
+                ...pillars.map((p) => ({ href: p.href, label: p.name })),
                 { href: "/services", label: "All Services" },
               ].map((l) => (
                 <Link key={l.href} href={l.href} style={{ fontSize: "0.85rem", fontWeight: 400, color: "rgba(248,244,227,0.7)", transition: "color 0.18s ease" }}

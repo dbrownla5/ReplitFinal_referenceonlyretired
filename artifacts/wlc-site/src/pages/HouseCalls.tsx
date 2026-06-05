@@ -23,7 +23,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function HouseCalls() {
   usePageMeta({
-    title: "The 2-Hour House Call — $175/hr | The Well Lived Citizen",
+    title: "Two-Hour House Call — $175/hr | The Well Lived Citizen",
     description: "Practical hourly help with the everyday running of a household. Technology, safety, organization, transitions. 2-hour minimum. Los Angeles.",
     path: "/house-calls",
   });
@@ -37,9 +37,9 @@ export default function HouseCalls() {
           <div style={{ maxWidth: 680 }}>
             <span className="eyebrow" style={{ color: "rgba(248,244,227,0.4)" }}>Service 02</span>
             <div style={{ display: "inline-block", backgroundColor: "var(--sage)", padding: "0.3rem 0.8rem", marginBottom: "1.5rem" }}>
-              <span style={{ fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--ink)" }}>Quick Book</span>
+              <span style={{ fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--ink)" }}>Quick Entry</span>
             </div>
-            <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>The 2-Hour House Call</h1>
+            <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>Two-Hour House Call</h1>
             <p style={{ fontSize: "1.15rem", fontWeight: 300, color: "rgba(248,244,227,0.75)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
               There used to be a person you could call. Not a professional service — a person. The neighbor who knew who to hire. The partner who kept track of all the passwords. The friend who just came over and figured it out with you.
             </p>
@@ -150,7 +150,7 @@ export default function HouseCalls() {
                   { label: "Cancellation", value: "24-hour notice" },
                   { label: "Retainer", value: "Available — ask on call" },
                   { label: "Travel", value: "Included within LA" },
-                  { label: "Quick Book entry", value: "The 2-Hour House Call" },
+                  { label: "Quick Entry", value: "Two-Hour House Call" },
                   { label: "Payment due", value: "At time of service" },
                   { label: "Accepted methods", value: "Venmo · Zelle · Check · Card" },
                 ].map((row, i) => (

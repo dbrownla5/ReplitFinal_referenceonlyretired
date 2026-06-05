@@ -24,7 +24,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export default function Pricing() {
   usePageMeta({
     title: "Pricing — The Well Lived Citizen",
-    description: "$495 flat 4-Hour Reset, $175/hr House Calls (2-hr minimum), Legacy quoted after walkthrough, Curated Resale commission-based with complimentary pickup. No hidden fees.",
+    description: "$495 flat Four-Hour Reset, $175/hr House Calls (2-hr minimum), Legacy quoted after walkthrough, Curated Resale commission-based with complimentary pickup. No hidden fees.",
     path: "/pricing",
   });
   return (
@@ -53,7 +53,7 @@ export default function Pricing() {
             {[
               {
                 num: "01",
-                service: "The Reset",
+                service: "Four-Hour Reset",
                 href: "/the-reset",
                 price: "$495",
                 unit: "flat rate",
@@ -114,7 +114,7 @@ export default function Pricing() {
                 description: "Free pickup. No payment up front. I evaluate, route, and list — you're paid from proceeds when items sell.",
                 details: [
                   "Clothing, accessories, designer, furniture, decor",
-                  "Fast Bag Fill is the easy start for clothing",
+                  "Quick Resale Pickup is the easy start for clothing",
                   "You agree to terms at intake, approve listings after evaluation",
                   "Custody transfers at pickup (in-person, UPS, or courier)",
                   "Commission split varies by category",
@@ -200,7 +200,7 @@ export default function Pricing() {
                 body: "You stay. You make the calls — I handle the physical execution. Good for spaces where every item needs your eye on it: inherited things, items with history, anything where you need to be part of the decision.",
               },
               {
-                mode: "The Closeout",
+                mode: "Move Closeout",
                 tag: "For whole-home transitions",
                 body: "You go through once and flag what stays. Everything else — donations, resale prep, packing, routing — gets handled after you leave. You don't have to be there for the hard part.",
               },
@@ -440,7 +440,7 @@ export default function Pricing() {
               },
               {
                 title: "Payment",
-                body: "For services (The Reset, House Calls, Legacy), payment is due at the time of service. I accept Venmo, Zelle, and check. For Curated Resale and Fast Bag Fill, there is no upfront payment — you're paid from proceeds after items sell. Retainer clients are billed monthly. Payment handles are confirmed when we lock the booking.",
+                body: "For services (The Reset, House Calls, Legacy), payment is due at the time of service. I accept Venmo, Zelle, and check. For Curated Resale and Quick Resale Pickup, there is no upfront payment — you're paid from proceeds after items sell. Retainer clients are billed monthly. Payment handles are confirmed when we lock the booking.",
               },
               {
                 title: "Travel",

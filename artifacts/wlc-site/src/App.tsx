@@ -1,4 +1,5 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useEffect } from "react";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import NotFound from "@/pages/not-found";
 
 import Home from "@/pages/Home";
@@ -19,6 +20,15 @@ import HomeReset from "@/pages/HomeReset";
 import LegacyPillar from "@/pages/LegacyPillar";
 import HouseCallsPillar from "@/pages/HouseCallsPillar";
 import CuratedResalePillar from "@/pages/CuratedResalePillar";
+
+// Land every navigation at the TOP of the destination page — never partway down.
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
 
 function Router() {
   return (
@@ -52,6 +62,7 @@ function Router() {
 function App() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <ScrollToTop />
       <Router />
     </WouterRouter>
   );

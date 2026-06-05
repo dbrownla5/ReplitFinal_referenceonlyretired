@@ -108,16 +108,16 @@ export default function CuratedResalePillar() {
         </div>
       </section>
 
-      {/* ── FAST BAG FILL DOORWAY ── */}
+      {/* ── QUICK RESALE PICKUP DOORWAY ── */}
       <section style={{ backgroundColor: "var(--ink)", padding: "6rem 0" }}>
         <div className="container">
           <FadeUp>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "start" }}>
               <div>
                 <div style={{ display: "inline-block", backgroundColor: "var(--sage)", padding: "0.25rem 0.75rem", marginBottom: "1.25rem" }}>
-                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--parchment)" }}>Quick Book Entry</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--parchment)" }}>Quick Entry</span>
                 </div>
-                <h2 className="display-md" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>The Fast Bag Fill</h2>
+                <h2 className="display-md" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>Quick Resale Pickup</h2>
                 <p style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(248,244,227,0.75)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
                   A simple way to start letting clothing leave the house. The bags I send are large zip totes — they hold anywhere from three king-size pillows to three dresser drawers' worth of clothing. What you put in them is up to you.
                 </p>
@@ -128,7 +128,7 @@ export default function CuratedResalePillar() {
                   Clothing and accessories only. Home decor, furniture, art, and delicate valuables require a local consultation.
                 </p>
                 <div style={{ marginTop: "2rem" }}>
-                  <Link href="/fast-bag-fill" className="btn btn-sage">Schedule a Fast Bag Pickup</Link>
+                  <Link href="/fast-bag-fill" className="btn btn-sage">Schedule a Quick Resale Pickup</Link>
                 </div>
               </div>
               <div>
@@ -246,9 +246,9 @@ export default function CuratedResalePillar() {
           </FadeUp>
           <div style={{ maxWidth: 720 }}>
             {[
-              { q: "What's the difference between Fast Bag Fill and full resale consignment?", a: "Fast Bag Fill is the easy way in for clothing and accessories — fill a bag, I come pick it up, I handle everything from there. Full resale consignment is a more deliberate process for items with significant value — designer pieces, collections, estate items, furniture, and home decor." },
+              { q: "What's the difference between Quick Resale Pickup and full resale consignment?", a: "Quick Resale Pickup is the easy way in for clothing and accessories — fill a bag, I come pick it up, I handle everything from there. Full resale consignment is a more deliberate process for items with significant value — designer pieces, collections, estate items, furniture, and home decor." },
               { q: "What happens to items that don't sell?", a: "Items that don't sell within the consignment window are returned to you or donated at your direction. I'll flag anything that hasn't moved at the 180-day mark so nothing sits indefinitely without your knowledge." },
-              { q: "Do you accept furniture?", a: "Yes — furniture, art, and significant home pieces are accepted through a local consultation, not the Fast Bag Fill. I'll evaluate the items in person and discuss routing." },
+              { q: "Do you accept furniture?", a: "Yes — furniture, art, and significant home pieces are accepted through a local consultation, not the Quick Resale Pickup. I'll evaluate the items in person and discuss routing." },
               { q: "How do I get paid?", a: "Your 30-day clock starts when you consent to the listings after evaluation. Every 30 days you'll get a sales report and a payout reflecting whatever sold in that window. Payouts via Venmo, Zelle, or check. Because each platform pays out on a different cadence, your statement reflects what's actually cleared during your 30-day window." },
               { q: "How do I know my items are being handled correctly?", a: "You'll get a sales report every 30 days — item, platform, price, and net proceeds. I don't keep anything without documentation. You agree to the resale terms at intake, possession transfers at pickup, and you approve every listing before it goes live." },
             ].map((item, i) => (
@@ -269,7 +269,7 @@ export default function CuratedResalePillar() {
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/bag-pickup" className="btn btn-sage">Schedule a Pickup</Link>
-                <Link href="/fast-bag-fill" className="btn btn-outline-light">Fast Bag Fill</Link>
+                <Link href="/fast-bag-fill" className="btn btn-outline-light">Quick Resale Pickup</Link>
               </div>
             </div>
           </FadeUp>

@@ -23,11 +23,11 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 const pillars = [
   {
     num: "01",
-    name: "Home Reset & Move Support",
+    name: "Home Organization & Move Support",
     tagline: "The relief of the room.",
     description: "Organization, unpacking, room functionality, closet editing, and post-move support. This is the work of getting a space to function around the way you actually live — not a showroom version of your life.",
-    includes: ["Closet and storage editing", "Post-move unpacking and setup", "Room-by-room functionality reset", "Move coordination and vendor oversight", "The Closeout (you go first, I close out)", "The Professional Landing (same-day move-in setup)"],
-    quickBook: { label: "The 4-Hour Reset", href: "/the-reset" },
+    includes: ["Closet and storage editing", "Post-move unpacking and setup", "Room-by-room functionality reset", "Move coordination and vendor oversight", "The Move Closeout (you go first, I close out)", "The Professional Landing (same-day move-in setup)"],
+    quickBook: { label: "Four-Hour Reset", href: "/the-reset" },
     pillarHref: "/home-reset-move-support",
   },
   {
@@ -45,7 +45,7 @@ const pillars = [
     tagline: "The person you used to be able to call.",
     description: "There's a person everyone used to have — or used to be. The neighbor who knew who to hire. The partner who kept track of everything. The friend who just came over and sorted it out. House Calls is that person, available to book — for yourself, for a parent, for someone who needs a capable human on the ground.",
     includes: ["Technology setup and troubleshooting", "Home safety updates", "Vendor oversight and access days", "Donation and return routing", "Remote family check-ins and updates", "Event prep and post-event breakdown"],
-    quickBook: { label: "The 2-Hour House Call", href: "/house-calls" },
+    quickBook: { label: "Two-Hour House Call", href: "/house-calls" },
     pillarHref: "/house-calls-pillar",
   },
   {
@@ -54,7 +54,7 @@ const pillars = [
     tagline: "It flows from everything else.",
     description: "A Reset surfaces what you're ready to part with. Legacy work uncovers what has real value sitting in storage. A move closeout routes what doesn't make the truck. The resale piece is already built into the other work — pickup, evaluation, and listing without asking you to become a part-time seller.",
     includes: ["Free pickup within service area", "Platform matching by item category", "Buyer communication and management", "Sales report and payout every 30 days from signing", "Donation rerouting for unsold items", "Designer, furniture, art, and clothing accepted"],
-    quickBook: { label: "Fast Bag Fill", href: "/fast-bag-fill" },
+    quickBook: { label: "Quick Resale Pickup", href: "/fast-bag-fill" },
     pillarHref: "/curated-resale-consignment",
   },
 ];
@@ -62,7 +62,7 @@ const pillars = [
 export default function Services() {
   usePageMeta({
     title: "Services — One Capable Person for What Piles Up | The Well Lived Citizen",
-    description: "Four pillars and three Quick Books. Home resets, legacy planning, house calls, and curated resale in greater Los Angeles. One number, one person, one invoice.",
+    description: "Four pillars and three Quick Entry offers. Home resets, legacy planning, house calls, and curated resale in greater Los Angeles. One number, one person, one invoice.",
     path: "/services",
   });
   return (
@@ -83,21 +83,21 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ── QUICK BOOKS ── */}
+      {/* ── QUICK ENTRY ── */}
       <section style={{ backgroundColor: "var(--parchment-mid)", padding: "5rem 0" }}>
         <div className="container">
           <FadeUp>
             <span className="eyebrow eyebrow-sage">Where Most People Start</span>
-            <h2 className="display-md" style={{ color: "var(--ink)", marginBottom: "0.75rem" }}>Quick Books</h2>
+            <h2 className="display-md" style={{ color: "var(--ink)", marginBottom: "0.75rem" }}>Quick Entry</h2>
             <p style={{ fontSize: "0.95rem", fontWeight: 300, color: "var(--sage-dark)", lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: 560 }}>
               These are the three things clients book most. Easy to schedule, easy to see results.
             </p>
           </FadeUp>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1px", backgroundColor: "var(--warm-gray-lt)" }}>
             {[
-              { href: "/the-reset", num: "QB01", name: "The 4-Hour Reset", price: "$495 flat rate", desc: "Four focused hours in the one space you keep meaning to fix. I show up and get it done." },
-              { href: "/house-calls", num: "QB02", name: "The 2-Hour House Call", price: "$175/hr · 2-hr min", desc: "Practical help for the things life accumulates faster than anyone has time to address. Technology, safety, organization, transitions." },
-              { href: "/fast-bag-fill", num: "QB03", name: "The Fast Bag Fill", price: "Complimentary pickup", desc: "Fill a bag with clothing and accessories you're ready to part with. Pickup is complimentary — I handle evaluation, routing, and resale." },
+              { href: "/the-reset", num: "01", name: "Four-Hour Reset", price: "$495 flat rate", desc: "Four focused hours in the one space you keep meaning to fix. I show up and get it done." },
+              { href: "/house-calls", num: "02", name: "Two-Hour House Call", price: "$350 · 2 hours", desc: "Practical help for the things life accumulates faster than anyone has time to address. Technology, safety, organization, transitions." },
+              { href: "/fast-bag-fill", num: "03", name: "Quick Resale Pickup", price: "Complimentary pickup", desc: "Fill a bag with clothing and accessories you're ready to part with. Pickup is complimentary — I handle evaluation, routing, and resale." },
             ].map((qb, i) => (
               <FadeUp key={i} delay={i * 60}>
                 <Link href={qb.href}>

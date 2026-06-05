@@ -28,7 +28,7 @@ const faqSections = [
       { q: "How do I know which service is right for me?", a: "The easiest way is to schedule a brief call. I'll ask a few questions and tell you honestly what makes the most sense for your situation. If you're not sure, The Reset is usually the right starting point — it's focused, time-limited, and gives you a clear sense of what working together looks like." },
       { q: "Do I need to have everything sorted out before I reach out?", a: "No. Most clients reach out with a general sense of what needs attention — 'the office is a disaster' or 'I need help with my mom's house' — and I figure out the specifics from there. You don't need a plan before you call." },
       { q: "Is there a consultation fee?", a: "No. The initial call is complimentary. It's a brief conversation to understand your situation and determine whether and how I can help. There's no obligation." },
-      { q: "How quickly can you get started?", a: "It depends on my current availability. For The Reset and House Calls, I can often schedule within 1–2 weeks. For Legacy Inventory, I'll discuss timeline at the consultation. Fast Bag Fill pickups can often happen within a few days." },
+      { q: "How quickly can you get started?", a: "It depends on my current availability. For The Reset and House Calls, I can often schedule within 1–2 weeks. For Legacy Inventory, I'll discuss timeline at the consultation. Quick Resale Pickups can often happen within a few days." },
     ]
   },
   {
@@ -50,9 +50,9 @@ const faqSections = [
     ]
   },
   {
-    title: "Resale & Fast Bag Fill",
+    title: "Resale & Quick Resale Pickup",
     items: [
-      { q: "What's the difference between Fast Bag Fill and full resale consignment?", a: "Fast Bag Fill is the easy way in for clothing and accessories — fill a bag, I come pick it up, I handle everything from there. Full resale consignment is a more deliberate process for items with significant value — designer pieces, collections, estate items, furniture, and home decor. Both can result in resale proceeds for you." },
+      { q: "What's the difference between Quick Resale Pickup and full resale consignment?", a: "Quick Resale Pickup is the easy way in for clothing and accessories — fill a bag, I come pick it up, I handle everything from there. Full resale consignment is a more deliberate process for items with significant value — designer pieces, collections, estate items, furniture, and home decor. Both can result in resale proceeds for you." },
       { q: "How quickly can items start selling?", a: "For standard items, listings can go live within 5–7 days of pickup. You could see items start selling within 10 days. Timelines vary by item and platform." },
       { q: "What if something doesn't sell?", a: "Items that don't sell within an agreed timeframe are returned to you or donated at your direction. I discuss this before I accept items so there are no surprises." },
       { q: "Do I need to clean or prep items before pickup?", a: "No. I handle the prep. Items should be in the condition they're in — I'll assess and handle what's needed." },
@@ -67,7 +67,7 @@ const faqSections = [
     ]
   },
   {
-    title: "Home Reset & Move Support",
+    title: "Home Organization & Move Support",
     items: [
       { q: "Do you do full moves? Do you move furniture? Do you bring a team?", a: "No — I don't do full moves and I don't move furniture. What I do is vendor oversight and coordination: I manage the move for you. That means handling the logistics, communicating with your movers, and making sure the right things happen in the right order so you don't have to be the one holding it all together.\n\nProject management is in my background. I'm comfortable running event coordination, breakdown and setup, and anything that requires multiple vendors or moving parts. For non-contractor repairs and tasks — things that require a drill, a wall anchor, or basic assembly — I do those myself, and everything I do follows the applicable codes for the City and State of California.\n\nI work well with other vendors and I have a network of people in the LA area I trust. I've just moved back, so I'm actively rebuilding and growing that network. In the meantime, my job is to find who you need — so you're not the one making calls, figuring out who's reliable, or managing a project you don't have time for." },
       { q: "Are you licensed? Is this a real business?", a: "Yes. The Well Lived Citizen is a registered business operating in Los Angeles, California. I'm insured, and everything I do that involves repairs, installations, or any work requiring tools follows the applicable codes for the City and State of California. If a project requires a licensed contractor — electrical, plumbing, structural — I'll tell you that clearly and connect you with the right person. I don't do work that requires a contractor's license, and I don't pretend otherwise." },
@@ -109,7 +109,7 @@ export default function FAQ() {
 
       <section style={{ backgroundColor: "var(--parchment)", padding: "5rem 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "240px 1fr", gap: "5rem", alignItems: "start" }}>
+          <div className="grid grid-cols-1 md:grid-cols-faq" style={{ gap: "5rem", alignItems: "start" }}>
             <div style={{ position: "sticky", top: "7rem" }}>
               <p style={{ fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--sage-dark)", marginBottom: "1rem" }}>Jump to</p>
               {faqSections.map((section, i) => (

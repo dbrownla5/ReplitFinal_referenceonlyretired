@@ -67,7 +67,7 @@ export default function AgreementGate() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          summary: "Fast Bag Fill — signed pickup",
+          summary: "Quick Resale Pickup — signed pickup",
           agreementAccepted: true,
           agreementTimestamp: new Date().toISOString(),
         }),

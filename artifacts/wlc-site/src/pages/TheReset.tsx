@@ -23,7 +23,7 @@ function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function TheReset() {
   usePageMeta({
-    title: "The 4-Hour Reset — $495 Flat | The Well Lived Citizen",
+    title: "Four-Hour Reset — $495 Flat | The Well Lived Citizen",
     description: "Four focused hours in the one space you keep meaning to fix. One flat rate. No hourly creep. Sorting, editing, placement, and routing — done in a single working session.",
     path: "/the-reset",
   });
@@ -37,9 +37,9 @@ export default function TheReset() {
           <div style={{ maxWidth: 680 }}>
             <span className="eyebrow" style={{ color: "rgba(248,244,227,0.4)" }}>Service 01</span>
             <div style={{ display: "inline-block", backgroundColor: "var(--sage)", padding: "0.3rem 0.8rem", marginBottom: "1.5rem" }}>
-              <span style={{ fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--ink)" }}>Quick Book</span>
+              <span style={{ fontSize: "0.65rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--ink)" }}>Quick Entry</span>
             </div>
-            <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>The 4-Hour Reset</h1>
+            <h1 className="display-lg" style={{ color: "var(--parchment)", marginBottom: "1.5rem" }}>Four-Hour Reset</h1>
             <p style={{ fontSize: "1.15rem", fontWeight: 300, color: "rgba(248,244,227,0.75)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
               There's a space in your home that's been silently accumulating pressure for longer than you want to admit. The closet that's quietly defeating you. The office that requires excavation every morning. The guest room that hasn't been a guest room in two years. The kitchen junk drawer that became a philosophy.
             </p>

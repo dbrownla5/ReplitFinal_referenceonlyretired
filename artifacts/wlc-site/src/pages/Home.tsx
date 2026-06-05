@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — Quick Entry / Fast Book offers (from brand.ts) */}
+            {/* Right — Quick Entry offers (from brand.ts) */}
             <div style={{ borderLeft: "1px solid rgba(248,244,227,0.12)", paddingLeft: "3rem" }}>
               <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sage)", marginBottom: "1.25rem" }}>
                 Quick Entry · start today
@@ -144,7 +144,7 @@ export default function Home() {
             <FadeUp delay={0}>
               <div style={{ backgroundColor: "var(--parchment)", padding: "2.5rem", height: "100%" }}>
                 <div className="underlay-tag underlay-tag-sage" style={{ marginBottom: "1.5rem" }}>01 — The Reset</div>
-                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>The 4-Hour Reset</h3>
+                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>Four-Hour Reset</h3>
                 <p style={{ fontSize: "0.95rem", fontWeight: 300, lineHeight: 1.8, color: "var(--ink-soft)", marginBottom: "2rem" }}>
                   One space, four hours, done. The closet you stop opening. The kitchen drawer everyone gave up on. The room that became a staging area eighteen months ago. I show up with a plan and leave it functional.
                 </p>
@@ -158,7 +158,7 @@ export default function Home() {
             <FadeUp delay={60}>
               <div style={{ backgroundColor: "var(--parchment)", padding: "2.5rem", height: "100%" }}>
                 <div className="underlay-tag" style={{ marginBottom: "1.5rem" }}>02 — House Calls</div>
-                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>The 2-Hour House Call</h3>
+                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>Two-Hour House Call</h3>
                 <p style={{ fontSize: "0.95rem", fontWeight: 300, lineHeight: 1.8, color: "var(--ink-soft)", marginBottom: "2rem" }}>
                   The short list of things that keep getting pushed: the smoke detector, the printer that hates everyone, the donation pile, the vendor who needs to be let in. Two-hour minimum, hourly after that.
                 </p>
@@ -172,7 +172,7 @@ export default function Home() {
             <FadeUp delay={120}>
               <div style={{ backgroundColor: "var(--parchment)", padding: "2.5rem", height: "100%" }}>
                 <div className="underlay-tag" style={{ marginBottom: "1.5rem" }}>03 — Curated Resale</div>
-                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>Fast Bag Fill</h3>
+                <h3 className="display-sm" style={{ color: "var(--ink)", marginBottom: "1rem" }}>Quick Resale Pickup</h3>
                 <p style={{ fontSize: "0.95rem", fontWeight: 300, lineHeight: 1.8, color: "var(--ink-soft)", marginBottom: "2rem" }}>
                   Fill a bag with clothing and accessories you're done with. I pick up, evaluate, route to the platform where the right buyer is, and list. You stop tripping over it. Free pickup in LA.
                 </p>
@@ -240,10 +240,10 @@ export default function Home() {
           </FadeUp>
           <div style={{ display: "grid", gap: "1px", backgroundColor: "var(--warm-gray-lt)" }}>
             {[
-              { num: "01", name: "Home Reset & Move Support", desc: "Organization, unpacking, room functionality, post-move setup. The 4-Hour Reset lives here. Ongoing support billed hourly when projects run longer.", href: "/home-reset-move-support" },
+              { num: "01", name: "Home Organization & Move Support", desc: "Organization, unpacking, room functionality, post-move setup. The Four-Hour Reset lives here. Ongoing support billed hourly when projects run longer.", href: "/home-reset-move-support" },
               { num: "02", name: "Legacy Planning & Inventory Catalog", desc: "Inventory and documentation of the belongings and stories families don't want to lose track of — before a move, a downsize, or a transition forces the decisions in a hurry.", href: "/legacy-planning" },
-              { num: "03", name: "House Calls", desc: "Hourly household support for busy professionals, independent older adults, and families managing a parent's home from a distance. The 2-Hour House Call lives here.", href: "/house-calls-pillar" },
-              { num: "04", name: "Curated Resale & Consignment", desc: "Drop off or schedule a pickup. I sort, evaluate, route, list, and ship. You recover value from things you no longer want to manage. The Fast Bag Fill lives here.", href: "/curated-resale-consignment" },
+              { num: "03", name: "House Calls", desc: "Hourly household support for busy professionals, independent older adults, and families managing a parent's home from a distance. The Two-Hour House Call lives here.", href: "/house-calls-pillar" },
+              { num: "04", name: "Curated Resale & Consignment", desc: "Drop off or schedule a pickup. I sort, evaluate, route, list, and ship. You recover value from things you no longer want to manage. The Quick Resale Pickup lives here.", href: "/curated-resale-consignment" },
             ].map((s, i) => (
               <FadeUp key={s.num} delay={i * 40}>
                 <Link href={s.href}>
