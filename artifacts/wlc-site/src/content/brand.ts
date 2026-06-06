@@ -97,8 +97,8 @@ export const pillars = [
   },
   {
     num: "02",
-    name: "Legacy Planning & Inventory Catalog",
-    desc: "Inventory and documentation of belongings and stories — inherited objects, antiques, records, fragile-item routing, preservation, resale routing.",
+    name: "Legacy Inventory & Cataloging",
+    desc: "Inventory, cataloging, downsizing prep, collection documentation, and resale planning for the things that quietly accumulate over a lifetime — sorted before the decisions become urgent.",
     price: "$175/hr · 2-hr minimum",
     href: "/legacy-planning",
   },
@@ -111,8 +111,8 @@ export const pillars = [
   },
   {
     num: "04",
-    name: "Curated Resale & Consignment",
-    desc: "Sort, evaluate, route, list, ship — across 10+ platforms by market fit. Story-rich vintage, designer, furniture, and home goods. Pickup included.",
+    name: "Resale & Consignment",
+    desc: "Fill a bag or schedule a pickup. I sort, evaluate, route, list, and sell — clothing, accessories, designer, and estate pieces. You recover the value without managing any of it. Free pickup.",
     price: "Commission-based · free pickup",
     href: "/curated-resale-consignment",
   },
