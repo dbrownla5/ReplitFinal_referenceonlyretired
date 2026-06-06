@@ -1,11 +1,11 @@
 /*
  * THE WELL LIVED CITIZEN — GLOBAL DESIGN SYSTEM
  * Palette: Warm parchment (#F8F4E3) + warm grays (#D4CDC3, #D5D0CD)
- *          + steel-slate accent (deep #304A59, muted #94A7B0) + near-black (#38302E)
- *          + cool neutral gray (#7E868A) for muted text.
- * NOTE: the accent is steel-blue slate (Dayna's original Well Dressed Citizen color),
- *       NOT sage-olive and NOT terracotta. The legacy token names --sage / --sage-dark
- *       are kept (used ~200×) but now hold the muted steel accent / cool gray.
+ * Palette (from Dayna's swatches): warm TAN (#EAE3D4) base · neutral CHARCOAL/BLACK
+ *          (#2D2F2F / #1C1C1C) — NOT brown espresso · STEEL-BLUE accent (#495B69)
+ *          · grayer OLIVE (#616359) used sparingly · light gray (#C9C9C3).
+ * NO brown espresso, NO yellow cream. The legacy token names --sage / --sage-dark
+ * are kept (used ~200×) but now hold a muted steel accent / warm gray.
  * Typography: Plus Jakarta Sans — 800 display, 400/300 body
  * Structure: Stacked full-bleed color blocks, opaque underlays, shadow cards
  * No rounded corners. No gradients. No blur. Restraint is the brand.
@@ -42,19 +42,19 @@
 }
 
 :root {
-  --parchment:     #F8F4E3;
-  --parchment-mid: #EAE3D4;
-  --warm-gray-lt:  #D4CDC3;
+  --parchment:     #EAE3D4;  /* warm TAN — main light bg (was yellow cream) */
+  --parchment-mid: #DED5C4;  /* deeper tan — alt sections / cards */
+  --warm-gray-lt:  #C9C9C3;  /* light gray — borders */
   --warm-gray-md:  #D5D0CD;
-  /* Steel-slate accent (replaces the old sage-olive). Deep = filled buttons/panels
-     with light text; muted = inline accents (eyebrows, arrows) that must read on
-     both parchment AND the dark ink sections. */
-  --slate:         #304A59; /* deep steel-blue — Dayna's original WDC color */
-  --slate-deep:    #25404C; /* hover / pressed */
-  --sage:          #94A7B0; /* LEGACY NAME — now the muted steel inline accent */
-  --sage-dark:     #7E868A; /* LEGACY NAME — now cool neutral gray for muted text */
-  --ink:           #38302E;
-  --ink-soft:      #4A4340;
+  /* Steel-blue accent + neutral charcoal. Deep slate = filled buttons/panels with
+     light text; muted = inline accents (eyebrows, arrows) that must read on both
+     the tan AND the dark charcoal sections. */
+  --slate:         #495B69; /* steel blue — accent fills / buttons (light text on it) */
+  --slate-deep:    #394753; /* hover / pressed */
+  --sage:          #8FA0AA; /* LEGACY NAME — muted steel inline accent (reads on light + dark) */
+  --sage-dark:     #7C7A70; /* LEGACY NAME — warm gray-olive for muted text */
+  --ink:           #2D2F2F; /* neutral CHARCOAL — replaces the brown espresso */
+  --ink-soft:      #474B4C; /* charcoal-soft */
 
   --bg:            var(--parchment);
   --bg-alt:        var(--parchment-mid);
@@ -66,23 +66,23 @@
   --accent:        var(--slate);
 
   --radius: 0px;
-  --background:           #F8F4E3;
-  --foreground:           #38302E;
-  --card:                 #F8F4E3;
-  --card-foreground:      #38302E;
-  --popover:              #F8F4E3;
-  --popover-foreground:   #38302E;
-  --primary:              #38302E;
-  --primary-foreground:   #F8F4E3;
-  --secondary:            #304A59;
-  --secondary-foreground: #F8F4E3;
-  --muted:                #EAE3D4;
-  --muted-foreground:     #7E868A;
-  --accent-foreground:    #38302E;
+  --background:           #EAE3D4;
+  --foreground:           #2D2F2F;
+  --card:                 #EAE3D4;
+  --card-foreground:      #2D2F2F;
+  --popover:              #EAE3D4;
+  --popover-foreground:   #2D2F2F;
+  --primary:              #2D2F2F;
+  --primary-foreground:   #EAE3D4;
+  --secondary:            #495B69;
+  --secondary-foreground: #EAE3D4;
+  --muted:                #DED5C4;
+  --muted-foreground:     #7C7A70;
+  --accent-foreground:    #2D2F2F;
   --destructive:          oklch(0.577 0.245 27.325);
-  --border:               #D4CDC3;
-  --input:                #D4CDC3;
-  --ring:                 #304A59;
+  --border:               #C9C9C3;
+  --input:                #C9C9C3;
+  --ring:                 #495B69;
 }
 
 @layer base {

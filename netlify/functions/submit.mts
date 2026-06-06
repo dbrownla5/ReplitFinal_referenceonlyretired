@@ -49,10 +49,19 @@ export default async (req: Request): Promise<Response> => {
   const ok = (emailed: boolean) =>
     json({ ok: true, emailed, opened: true, blocked: false });
 
-  // No key yet — don't lose the lead; log it and still confirm success.
+  // No key yet — we can't actually email this lead. Log it (so it's recoverable
+  // from Netlify logs) but DO NOT fake success: tell the visitor to reach Dayna
+  // directly so the lead is never silently swallowed.
   if (!key) {
     console.log("LEAD (RESEND_API_KEY not set):\n" + text);
-    return ok(false);
+    return json(
+      {
+        ok: false,
+        error:
+          "I couldn't send this automatically right now — please email dayna@thewelllivedcitizen.com or text (323) 433-1350 and I'll get right back to you.",
+      },
+      503,
+    );
   }
 
   try {
@@ -69,7 +78,14 @@ export default async (req: Request): Promise<Response> => {
     });
     if (!res.ok) {
       console.error("Resend error:", await res.text());
-      return json({ ok: false, error: "Email delivery failed." }, 502);
+      return json(
+        {
+          ok: false,
+          error:
+            "Something went wrong sending this — please email dayna@thewelllivedcitizen.com or text (323) 433-1350 so it doesn't get lost.",
+        },
+        502,
+      );
     }
     return ok(true);
   } catch (err) {

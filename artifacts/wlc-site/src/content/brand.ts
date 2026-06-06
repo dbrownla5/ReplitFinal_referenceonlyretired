@@ -57,7 +57,7 @@ export const entryOffers = [
     name: "Four-Hour Reset",
     price: "$495 · one 4-hour block",
     blurb:
-      "Focused operational support for the area, room, or project creating the most immediate friction.",
+      "One room, one project, one afternoon. The closet, the office, the garage you keep closing the door on — handled in a single block.",
     href: "/the-reset",
   },
   {
@@ -65,7 +65,7 @@ export const entryOffers = [
     name: "Two-Hour House Call",
     price: "$350",
     blurb:
-      "Practical support for household tasks, technology, errands, setup, organization, and operational life admin.",
+      "The list that never gets shorter: the returns, the install, the vendor who needs letting in, the thing that's been on the counter for a month.",
     href: "/house-calls",
   },
   {
@@ -73,7 +73,7 @@ export const entryOffers = [
     name: "Quick Resale Pickup",
     price: "Commission-based · free pickup",
     blurb:
-      "Convenient pickup and resale handling for clothing and accessories.",
+      "Fill a bag with the clothes you're done with. I pick up, list, and sell — you just get paid.",
     href: "/fast-bag-fill",
   },
   {
@@ -81,7 +81,7 @@ export const entryOffers = [
     name: "Move Closeout",
     price: "$150/hr",
     blurb:
-      "Hourly post-move operational support for unresolved logistics, storage coordination, resale, packing, shipping, and final household wrap-up after relocation.",
+      "You already moved. The boxes, the storage unit, the resale pile, the loose ends — I close out what the move left behind.",
     href: "/home-reset-move-support",
   },
 ] as const;
@@ -97,8 +97,8 @@ export const pillars = [
   },
   {
     num: "02",
-    name: "Legacy Planning & Inventory Catalog",
-    desc: "Inventory and documentation of belongings and stories — inherited objects, antiques, records, fragile-item routing, preservation, resale routing.",
+    name: "Legacy Inventory & Cataloging",
+    desc: "Inventory, cataloging, downsizing prep, collection documentation, and resale planning for the things that quietly accumulate over a lifetime — sorted before the decisions become urgent.",
     price: "$175/hr · 2-hr minimum",
     href: "/legacy-planning",
   },
@@ -111,8 +111,8 @@ export const pillars = [
   },
   {
     num: "04",
-    name: "Curated Resale & Consignment",
-    desc: "Sort, evaluate, route, list, ship — across 10+ platforms by market fit. Story-rich vintage, designer, furniture, and home goods. Pickup included.",
+    name: "Resale & Consignment",
+    desc: "Fill a bag or schedule a pickup. I sort, evaluate, route, list, and sell — clothing, accessories, designer, and estate pieces. You recover the value without managing any of it. Free pickup.",
     price: "Commission-based · free pickup",
     href: "/curated-resale-consignment",
   },
