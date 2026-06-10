@@ -35,11 +35,11 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-export default function CuratedResalePillar() {
+export default function ResaleConsignmentPillar() {
   usePageMeta({
     title: "Resale & Consignment — Pillar 04 | The Well Lived Citizen",
     description: "Resale for the things still worth something. Pickup, evaluation, photography, listing, and payout. Commission-based. Los Angeles.",
-    path: "/curated-resale-consignment",
+    path: "/resale-consignment",
   });
   return (
     <div style={{ backgroundColor: "var(--parchment)", minHeight: "100vh" }}>

@@ -108,7 +108,7 @@ export default function Pricing() {
               {
                 num: "04",
                 service: "Resale & Consignment",
-                href: "/curated-resale-consignment",
+                href: "/resale-consignment",
                 price: "Free",
                 unit: "pickup · commission-only",
                 description: "Free pickup. No payment up front. I evaluate, route, and list — you're paid from proceeds when items sell.",

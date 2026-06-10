@@ -55,7 +55,7 @@ const pillars = [
     description: "A Reset surfaces what you're ready to part with. Legacy work turns up things with real value sitting in storage. A move closeout routes what doesn't make the truck. The resale piece is already built into the other work — pickup, evaluation, and listing without you having to become a part-time seller.",
     includes: ["Free pickup within service area", "Items matched to the platform where they actually sell", "Buyer communication handled for you", "Sales report and payout every 30 days from signing", "Donation rerouting for items that don't sell", "Clothing, accessories, designer, and estate pieces"],
     quickBook: { label: "Quick Resale Pickup", href: "/fast-bag-fill" },
-    pillarHref: "/curated-resale-consignment",
+    pillarHref: "/resale-consignment",
   },
 ];
 
