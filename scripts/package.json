@@ -1,14 +1,14 @@
 {
   "name": "@workspace/scripts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "hello": "tsx ./src/hello.ts",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc --noEmit",
+    "audit:content": "ts-node src/audit-content.ts"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "tsx": "catalog:"
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.9.3"
   }
 }
