@@ -137,10 +137,10 @@ export const pricing = {
 
 /** Resale commission — % to client / % to TWLC, on net sale price. */
 export const commission = [
-  { category: "Clothing & Accessories", client: "45%", twlc: "55%" },
+  { category: "Clothing & Accessories", client: "55%", twlc: "45%" },
   { category: "Designer & Luxury", client: "50%", twlc: "50%" },
   { category: "Furniture & Significant Home", client: "50%", twlc: "50%" },
-  { category: "Full Closet Liquidation", client: "45%", twlc: "55%" },
+  { category: "Full Closet Liquidation", client: "55%", twlc: "45%" },
 ] as const;
 
 /** Supply add-on bundles — SUPPLIES ONLY, never labor. */
