@@ -49,10 +49,11 @@ steps; today you can open and run bags from the dashboard yourself.
 
 ## Money rulings — status
 
-- **F1 — clothing split: RULED + applied.** Dayna ruled **55% client / 45% WLC**.
-  Applied to **Clothing & Accessories** and **Full Closet Liquidation** (your
-  memory pairs them) in all five spots: `brand.ts`, `ResaleConsignmentPillar.tsx`,
-  `FastBagFill.tsx`, `AgreementGate.tsx`, and the PDF generator. Typecheck passes.
+- **F1 — clothing split: RULED (confirmed in plain dollars).** Dayna confirmed
+  **WLC keeps 55% / client keeps 45%** on clothing & accessories. This already
+  matches the signed resale agreement and the original site copy, so the site is
+  correct as-is — an earlier edit to the reverse direction was reverted. Paper
+  and site agree.
 - **F5 — payout amount: HELD per ruling.** The backend still pays by four tiers
   (`logic.ts`: standard 40 / contemporary 45 / designer 50 / luxury 60) and the
   public table is three (clothing 55 / designer 50 / furniture 50). Dayna chose
@@ -62,16 +63,15 @@ steps; today you can open and run bags from the dashboard yourself.
   the flag to `true` once the tiers are ruled.
 
 ### Still open (flag, don't pick) ⚠️
-- **The signed resale agreement** (`attached_assets/wlc-resale-agreement…`) still
-  reads client 45 for clothing — update it to match the 55/45 ruling so paper
-  and site agree.
-- **Full Closet Liquidation** — flipped to 55/45 to match clothing, but one of
-  your docs calls it a "phantom tier, remove (master = three tiers only)." Keep
-  it or cut it? Your call.
-- **Low-Value Volume 35/65** — left untouched (it's in the signed agreement and
-  you didn't rule it).
-- Update `truth/FACT-LEDGER.md` (F1 ✅) in your local agent-system so the ledger
-  and the repo agree.
+- **Your CLAUDE-LAW + audit say "client 55" — the REVERSE of what you confirmed
+  in dollars (WLC 55 / client 45).** Correct those agent-built docs and
+  `truth/FACT-LEDGER.md` so the next session doesn't flip it back. (This is the
+  exact "titles aren't credentials" trap your own law warns about — the binding
+  signed agreement won.)
+- **Full Closet Liquidation** — currently client 45 / WLC 55 (same as clothing).
+  One of your docs calls it a "phantom tier, remove (master = three tiers only)."
+  Keep it or cut it? Your call.
+- **Low-Value Volume 35/65** — left as-is (in the signed agreement; not ruled).
 
 ## Follow-ups (small, not blocking)
 

@@ -200,7 +200,7 @@ export default function FastBagFill() {
               </div>
               <div>
                 {[
-                  { label: "Clothing & Accessories", value: "55% to you / 45% WLC", note: "Standard resale items" },
+                  { label: "Clothing & Accessories", value: "45% to you / 55% WLC", note: "Standard resale items" },
                   { label: "Designer & Luxury", value: "50% to you / 50% WLC", note: "Designer handbags, luxury clothing" },
                   { label: "Low-Value Volume", value: "35% to you / 65% WLC", note: "Primarily $5–$10 resale range · reviewed at intake, never applied retroactively" },
                   { label: "Pickup fee", value: "Free", note: "Within LA service area" },
