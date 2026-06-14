@@ -1,0 +1,53 @@
+# Render Blueprint — WLC resale Handshake backend
+# ---------------------------------------------------------------------------
+# This is the backend host from YOUR plan (plan-HANDSHAKE-DASHBOARD.md, Phase 2):
+# the Express api-server in artifacts/api-server, talking to your Supabase
+# database over DATABASE_URL, sending client email via Resend.
+#
+# To deploy: Render dashboard -> New -> Blueprint -> connect this repo.
+# Render reads this file, builds the service, and asks you for the secret
+# values marked `sync: false` below (the ones only you have).
+# ---------------------------------------------------------------------------
+services:
+  - type: web
+    name: wlc-api
+    runtime: node
+    plan: free            # free sleeps between requests (fine for testing);
+                          # switch to "starter" ($7/mo) to keep it always-on
+                          # once real clients are flowing.
+    region: ohio          # nearest to your Supabase project (us-east-2)
+    rootDir: .
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @workspace/api-server run build
+    startCommand: pnpm --filter @workspace/api-server run start
+    healthCheckPath: /api/healthz
+    autoDeploy: false     # deploy on your say-so, not on every push
+    envVars:
+      # --- REQUIRED: the database (only you have this) ---
+      - key: DATABASE_URL          # Supabase -> Project Settings -> Database ->
+        sync: false                #   Connection string (URI). Paste it here.
+
+      # --- Client email (flow works without it; emails just won't send) ---
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CONTACT_FROM
+        value: The Well Lived Citizen <dayna@thewelllivedcitizen.com>
+      - key: CONTACT_TO
+        value: dayna@thewelllivedcitizen.com
+
+      # --- Where client consent links point ---
+      - key: PUBLIC_SITE_URL
+        value: https://thewelllivedcitizen.com
+
+      # --- NOTE: the backend currently imports the OpenAI/captions client at
+      #     boot, so these must be set for the service to START (even though the
+      #     resale flow never calls AI). Use your Replit AI values, or any
+      #     placeholder until Caption Studio is turned on. Follow-up below
+      #     removes this coupling so resale needs only DATABASE_URL. ---
+      - key: AI_INTEGRATIONS_OPENAI_BASE_URL
+        sync: false
+      - key: AI_INTEGRATIONS_OPENAI_API_KEY
+        sync: false
+
+      # --- Recommended once the dashboard password gate is added (follow-up) ---
+      - key: DASHBOARD_PASSWORD
+        sync: false
