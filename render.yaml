@@ -51,3 +51,9 @@ services:
       # --- Recommended once the dashboard password gate is added (follow-up) ---
       - key: DASHBOARD_PASSWORD
         sync: false
+
+      # --- F5: holds the auto-computed payout DOLLAR amount until the tier math
+      #     is ruled. "false" = amounts are advisory only (date still computes,
+      #     nothing pays out). Set to "true" once Dayna rules the payout tiers. ---
+      - key: PAYOUT_AMOUNT_ENABLED
+        value: "false"

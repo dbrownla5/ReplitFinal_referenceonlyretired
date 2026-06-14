@@ -47,22 +47,31 @@ Editor. DDL record: `docs/supabase-resale-schema.sql`.
 That's it. The static site (Netlify) and the public form wiring are separate
 steps; today you can open and run bags from the dashboard yourself.
 
-## Two money rulings are YOURS (your law: flag, don't pick) ⚠️
+## Money rulings — status
 
-1. **F1 — clothing & accessories split.** The repo currently reads **45% to the
-   client / 55% WLC** (in `brand.ts`, `ResaleConsignmentPillar.tsx`,
-   `FastBagFill.tsx`, `AgreementGate.tsx`, and the PDF generator). Your
-   CLAUDE-LAW + audit say your ruling is **55% to the client / 45% WLC** — but
-   your session memory says "Dayna 55/45" (you keep 55) and your **signed
-   agreement** says client 45. These disagree, it's real money on every clothing
-   sale, so **nothing was changed.** Tell me the direction and I flip all five
-   spots in one pass.
-2. **F5 — the payout tier math.** The backend pays by four tiers (client share
-   **standard 40 / contemporary 45 / designer 50 / luxury 60**, `logic.ts`).
-   Your public table is three (clothing 55 / designer 50 / furniture 50). They
-   don't line up for clothing/standard. Until you rule, the auto-payout *amount*
-   should stay advisory. (Designer matches at 50%, which is why the test bag was
-   exact.)
+- **F1 — clothing split: RULED + applied.** Dayna ruled **55% client / 45% WLC**.
+  Applied to **Clothing & Accessories** and **Full Closet Liquidation** (your
+  memory pairs them) in all five spots: `brand.ts`, `ResaleConsignmentPillar.tsx`,
+  `FastBagFill.tsx`, `AgreementGate.tsx`, and the PDF generator. Typecheck passes.
+- **F5 — payout amount: HELD per ruling.** The backend still pays by four tiers
+  (`logic.ts`: standard 40 / contemporary 45 / designer 50 / luxury 60) and the
+  public table is three (clothing 55 / designer 50 / furniture 50). Dayna chose
+  to **leave the dollar amount off for now**: the payout *date* computes and the
+  step runs, but the client amount is held (`PAYOUT_AMOUNT_ENABLED` defaults
+  off) — verified, the amount writes `NULL` and no client email goes out. Flip
+  the flag to `true` once the tiers are ruled.
+
+### Still open (flag, don't pick) ⚠️
+- **The signed resale agreement** (`attached_assets/wlc-resale-agreement…`) still
+  reads client 45 for clothing — update it to match the 55/45 ruling so paper
+  and site agree.
+- **Full Closet Liquidation** — flipped to 55/45 to match clothing, but one of
+  your docs calls it a "phantom tier, remove (master = three tiers only)." Keep
+  it or cut it? Your call.
+- **Low-Value Volume 35/65** — left untouched (it's in the signed agreement and
+  you didn't rule it).
+- Update `truth/FACT-LEDGER.md` (F1 ✅) in your local agent-system so the ledger
+  and the repo agree.
 
 ## Follow-ups (small, not blocking)
 

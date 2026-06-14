@@ -306,7 +306,13 @@ router.post("/handshake/:id/payout", async (req, res) => {
     return;
   }
   const items = await store.listItems(id);
-  const totalCents = payoutTotalCents(
+  // F5 (founder ruling pending): the item-tier -> client-split mapping isn't
+  // settled (backend 4-tier vs the public 3-category table), so the
+  // auto-computed dollar amount is ADVISORY ONLY. It is held back from the
+  // record and the client until PAYOUT_AMOUNT_ENABLED=true. The payout *date*
+  // still computes — nothing pays out a number that hasn't been ruled.
+  const amountEnabled = process.env.PAYOUT_AMOUNT_ENABLED === "true";
+  const advisoryTotalCents = payoutTotalCents(
     items.map((it) => ({
       tier: (it.tier as any) ?? "standard",
       disposition: it.disposition,
@@ -316,6 +322,7 @@ router.post("/handshake/:id/payout", async (req, res) => {
       shippingCents: it.shippingCents,
     })),
   );
+  const totalCents = amountEnabled ? advisoryTotalCents : null;
   // Payout clock anchors on the consent decision date when present, else now.
   const anchor = hs.consentDecisionAt ?? new Date();
   const payoutDate = computePayoutDate(anchor);
@@ -324,13 +331,32 @@ router.post("/handshake/:id/payout", async (req, res) => {
     step: "payout",
     payoutClientTotalCents: totalCents,
     payoutDate,
-    payoutPaidAt: req.body?.markPaid ? new Date() : null,
+    payoutPaidAt: req.body?.markPaid && amountEnabled ? new Date() : null,
   });
-  const tpl = tplPayout(hs.clientName, formatCents(totalCents), payoutDate.toDateString());
-  const email = await sendEmail({ to: hs.clientEmail, subject: tpl.subject, text: tpl.text });
-  await store.logEvent(id, "payout", "payout_recorded", { totalCents, payoutDate, emailDelivered: email.delivered });
+  // Only email the client a payout summary once a real, ruled amount exists.
+  let email: { delivered: boolean } | null = null;
+  if (amountEnabled && totalCents != null) {
+    const tpl = tplPayout(hs.clientName, formatCents(totalCents), payoutDate.toDateString());
+    email = await sendEmail({ to: hs.clientEmail, subject: tpl.subject, text: tpl.text });
+  }
+  await store.logEvent(id, "payout", amountEnabled ? "payout_recorded" : "payout_date_set_amount_held", {
+    totalCents,
+    advisoryTotalCents,
+    amountEnabled,
+    payoutDate,
+    emailDelivered: email?.delivered ?? null,
+  });
 
-  res.json({ ok: true, handshake: updated, totalCents, total: formatCents(totalCents), payoutDate, emailDelivered: email.delivered });
+  res.json({
+    ok: true,
+    handshake: updated,
+    amountEnabled,
+    totalCents,
+    advisoryTotalCents,
+    total: totalCents != null ? formatCents(totalCents) : null,
+    payoutDate,
+    emailDelivered: email?.delivered ?? null,
+  });
 });
 
 // ── Client-facing consent (token) ───────────────────────────────────────────────
