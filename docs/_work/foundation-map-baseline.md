@@ -2,6 +2,8 @@
 
 This map lists what is currently available to assemble, with readiness and integration cost.
 
+Phase labels in this document map to the chronology buckets defined in `docs/_work/brand-lineage-extraction-baseline.md`.
+
 ## Available Copy Library (tagged)
 
 | Item | Source | Phase | Use case | Readiness |

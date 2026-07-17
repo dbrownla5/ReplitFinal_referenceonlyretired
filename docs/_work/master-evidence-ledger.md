@@ -27,8 +27,8 @@ This ledger is evidence-first. It does not declare a final brand truth.
 
 Use this exact row format when adding Drive audits:
 
-- Source link format: use the full share URL (`https://drive.google.com/file/d/<FILE_ID>/view` or `https://drive.google.com/drive/folders/<FOLDER_ID>`).
-- If the source is inside a Drive folder, append `#file=<FILE_ID>` in notes so the exact artifact is traceable.
+- Source link format: use the full share URL (`https://drive.google.com/file/d/{FILE_ID}/view` or `https://drive.google.com/drive/folders/{FOLDER_ID}`).
+- If the source is inside a Drive folder, append `#file={FILE_ID}` in notes so the exact artifact is traceable.
 - Keep one row per audit artifact (do not bundle multiple files into one row).
 
 | Source | Date | Brand context | Copy fragments (pullable) | Tool fragments (pullable) | Confidence | Why not used / drift reason |
