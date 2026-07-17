@@ -25,11 +25,11 @@ This ledger is evidence-first. It does not declare a final brand truth.
 
 ## Intake placeholders for external audits (Google Drive)
 
-Use this exact row format when adding Drive audits:
+Use this row format when adding Drive audits:
 
-- Source link format: use the full share URL (`https://drive.google.com/file/d/{FILE_ID}/view` or `https://drive.google.com/drive/folders/{FOLDER_ID}`).
-- If the source is inside a Drive folder, append `#file={FILE_ID}` in notes so the exact artifact is traceable.
-- Keep one row per audit artifact (do not bundle multiple files into one row).
+- Use the full share URL (`https://drive.google.com/file/d/{FILE_ID}/view` or `https://drive.google.com/drive/folders/{FOLDER_ID}`).
+- If the source sits inside a Drive folder, append `#file={FILE_ID}` in the notes so the exact artifact stays traceable.
+- Keep one row per audit artifact instead of bundling multiple files together.
 
 | Source | Date | Brand context | Copy fragments (pullable) | Tool fragments (pullable) | Confidence | Why not used / drift reason |
 |---|---|---|---|---|---|---|
