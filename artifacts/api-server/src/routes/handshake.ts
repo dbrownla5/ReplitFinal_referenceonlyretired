@@ -326,12 +326,18 @@ router.post("/handshake/:id/payout", async (req, res) => {
   // Payout clock anchors on the consent decision date when present, else now.
   const anchor = hs.consentDecisionAt ?? new Date();
   const payoutDate = computePayoutDate(anchor);
+  const markPaid = req.body?.markPaid === true;
+
+  if (markPaid && !amountEnabled) {
+    res.status(400).json({ ok: false, error: "Cannot mark payout paid while payout amounts are disabled." });
+    return;
+  }
 
   const updated = await store.updateHandshake(id, {
     step: "payout",
     payoutClientTotalCents: totalCents,
     payoutDate,
-    payoutPaidAt: req.body?.markPaid && amountEnabled ? new Date() : null,
+    ...(markPaid ? { payoutPaidAt: new Date() } : {}),
   });
   // Only email the client a payout summary once a real, ruled amount exists.
   let email: { delivered: boolean } | null = null;
