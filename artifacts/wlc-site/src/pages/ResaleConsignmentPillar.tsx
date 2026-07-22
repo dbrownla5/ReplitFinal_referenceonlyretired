@@ -220,10 +220,10 @@ export default function ResaleConsignmentPillar() {
               </div>
               <div>
                 {[
-                  { category: "Clothing & Accessories", split: "45% to you / 55% WLC", note: "Standard items, shoes, bags, jewelry" },
+                  { category: "Clothing & Accessories", split: "55% to you / 45% WLC", note: "Standard items, shoes, bags, jewelry" },
                   { category: "Designer & Luxury", split: "50% to you / 50% WLC", note: "Designer handbags, luxury clothing, fine jewelry" },
                   { category: "Furniture & Significant Home Pieces", split: "50% to you / 50% WLC", note: "Furniture, art, significant home pieces" },
-                  { category: "Full Closet Liquidation", split: "45% to you / 55% WLC", note: "Whole-closet edits, multi-piece engagements" },
+                  { category: "Full Closet Liquidation", split: "55% to you / 45% WLC", note: "Whole-closet edits, multi-piece engagements" },
                   { category: "Low-Value Volume", split: "35% to you / 65% WLC", note: "Primarily $5–$10 resale range · reviewed at intake, never applied retroactively" },
                 ].map((row, i) => (
                   <div key={i} style={{ padding: "1.25rem 0", borderBottom: "1px solid rgba(56,48,46,0.15)" }}>

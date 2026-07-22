@@ -56,11 +56,11 @@ check("cannot move backward", () => {
   assert.equal(canAdvance("custody", "intake").ok, false);
 });
 
-// ── Payout math (the worked example from the spec) ──
+// ── Payout math ──
 check("net = gross − fees − shipping", () => {
   assert.equal(itemNetCents({ tier: "designer", soldGrossCents: 7000, feesCents: 1000, shippingCents: 800 }), 5200);
 });
-check("designer tier pays 50%: $52 net → $26 to client", () => {
+check("designer tier pays 50% of net to client", () => {
   const item = { tier: "designer" as const, soldGrossCents: 7000, feesCents: 1000, shippingCents: 800 };
   assert.equal(tierSharePct("designer"), 0.5);
   assert.equal(itemClientShareCents(item), 2600);

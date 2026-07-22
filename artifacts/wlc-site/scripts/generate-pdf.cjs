@@ -170,10 +170,10 @@ function generateResaleAgreementPDF() {
 
       // Rows
       const rows = [
-        ["Clothing & Accessories", "45%", "55%"],
+        ["Clothing & Accessories", "55%", "45%"],
         ["Designer & Luxury", "50%", "50%"],
         ["Furniture & Significant Home Pieces", "50%", "50%"],
-        ["Full Closet Liquidation", "45%", "55%"],
+        ["Full Closet Liquidation", "55%", "45%"],
         ["Low-Value Volume (Items in the $5–$10 range)", "35%", "65%"]
       ];
 

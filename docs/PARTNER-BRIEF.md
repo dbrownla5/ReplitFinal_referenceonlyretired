@@ -34,7 +34,7 @@ Drizzle/Postgres, React site). No second app to host.
 - ✅ `pnpm --filter @workspace/api-server run build` — esbuild bundle succeeds
 - ✅ `pnpm --filter @workspace/wlc-site run build` — vite build succeeds
 - ✅ `node --experimental-strip-types artifacts/api-server/src/handshake/logic.test.ts`
-  — **12/12** checks pass, incl. the payout worked example ($52 net × designer 50% = $26)
+  — **12/12** checks pass
 - ✅ Built server boots and serves: health `200`, unsigned intake `400`,
   dashboard `200`, unknown route `404`
 

@@ -84,17 +84,14 @@ treat it as sending client PII off-platform. Before going live:
 - Payout total = sum of client shares for items that sold and weren't pulled.
 - Payout date = first Monday strictly after (consent date + 30 days).
 
-Worked example (verified in tests): $70 gross − $10 fees − $8 shipping = $52 net;
-Designer 50% = **$26 to client**.
-
 ## Verification status — what was actually run
 
 Honest ledger (this build box has the npm registry but **no live Postgres**, so
 DB round-trips are verified on Replit where `DATABASE_URL` exists):
 
 - ✅ **Business logic** — ran `logic.test.ts`: **12/12 checks pass** (gate blocks
-  unsigned / opens signed, steps can't skip or reverse, payout math incl. the
-  $26 example, payout date rule).
+  unsigned / opens signed, steps can't skip or reverse, payout math and the
+  payout date rule).
 - ✅ **Type safety** — full `pnpm run typecheck` passes across libs, server, site.
 - ✅ **Server builds & boots** — esbuild bundle succeeds; the built server serves
   `/api/healthz` (200), intake validation (400), and the dashboard (200).
